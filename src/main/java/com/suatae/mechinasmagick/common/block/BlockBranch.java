@@ -62,7 +62,14 @@ public class BlockBranch extends BlockBase implements ITileEntityProvider {
 
 	@Override
 	public void onEntityWalking(World world, int x, int y, int z, Entity entity) {
-		if (entity instanceof EntityLivingBase) {
+		if (entity instanceof EntityLivingBase && !world.isRemote) {
+			world.func_147480_a(x, y, z, true);
+		}
+	}
+
+	@Override
+	public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
+		if (entity instanceof EntityLivingBase && !world.isRemote) {
 			world.func_147480_a(x, y, z, true);
 		}
 	}

@@ -1,6 +1,5 @@
 package com.suatae.mechinasmagick.common.tileentity;
 
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
 
@@ -9,17 +8,17 @@ import net.minecraft.tileentity.TileEntity;
 
 public class TileEntityAncientContainer extends TileEntity {
 
-	private int	i1	= 16;
-
-	@Override
-	public void readFromNBT(NBTTagCompound tag) {
-		super.readFromNBT(tag);
-	}
-
-	@Override
-	public void writeToNBT(NBTTagCompound tag) {
-		super.writeToNBT(tag);
-	}
+	// private int i1 = 16;
+	//
+	// @Override
+	// public void readFromNBT(NBTTagCompound tag) {
+	// super.readFromNBT(tag);
+	// }
+	//
+	// @Override
+	// public void writeToNBT(NBTTagCompound tag) {
+	// super.writeToNBT(tag);
+	// }
 
 	// public boolean anyPlayerInRange() {
 	// return this.worldObj.getClosestPlayer(this.xCoord + 0.5D, this.yCoord +

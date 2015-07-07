@@ -57,6 +57,10 @@ public class BlockAncientSeedContainer extends BlockBase implements ITileEntityP
 		return true;
 	}
 
+	public boolean shouldRender3DInInventory() {
+		return true;
+	}
+
 	@Override
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();

@@ -5,6 +5,7 @@ import java.util.Random;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -45,22 +46,30 @@ public class BlockAncientSteppingStone extends BlockBase {
 	}
 
 	@Override
-	public void onNeighborBlockChange(World world, int X, int Y, int Z, Block block) {
+	public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
 
 		for (ForgeDirection d : ForgeDirection.VALID_DIRECTIONS) {
-			Block lava = world.getBlock(X + d.offsetX, Y + d.offsetY, Z + d.offsetZ);
+			Block lava = world.getBlock(x + d.offsetX, y, z + d.offsetZ);
 			if (!(lava != REF.BLOCK.lava)) {
-				world.func_147480_a(X, Y, Z, false);
-				world.setBlock(X, Y, Z, REF.BLOCK.lava);
+				world.func_147480_a(x, y, z, false);
+				world.setBlock(x, y, z, REF.BLOCK.lava);
 			}
 		}
 
 	};
 
 	@Override
-	public void onEntityWalking(World world, int X, int Y, int Z, Entity entity) {
-		world.func_147480_a(X, Y, Z, false);
-		world.setBlock(X, Y, Z, REF.BLOCK.lava);
+	public void onEntityWalking(World world, int x, int y, int z, Entity entity) {
+		world.func_147480_a(x, y, z, false);
+		world.setBlock(x, y, z, REF.BLOCK.lava);
+	}
+
+	@Override
+	public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
+		if (entity instanceof EntityLivingBase && !world.isRemote) {
+			world.func_147480_a(x, y, z, false);
+			world.setBlock(x, y, z, REF.BLOCK.lava);
+		}
 	}
 
 	@Override
