@@ -22,9 +22,9 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class BlockStoneBrick extends Block {
 
-	private int				maxMeta	= 3;
-	private final String	name	= REF.NAME.BLOCK.MSTONEBRICK;
-	private final String	namei	= REF.NAME.BLOCK.MiSTONEBRICK;
+	public static int		maxMeta	= 3;
+	private final String	name	= REF.NAME.BLOCK.BRICK;
+	private final String	namei	= REF.NAME.BLOCK.iBRICK;
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[]			icons;
@@ -54,8 +54,8 @@ public class BlockStoneBrick extends Block {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int par1, int par2) {
-		return icons[par2];
+	public IIcon getIcon(int side, int meta) {
+		return icons[meta];
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })

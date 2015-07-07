@@ -7,12 +7,14 @@ import com.suatae.mechinasmagick.common.block.BlockAncientDoorT;
 import com.suatae.mechinasmagick.common.block.BlockAncientSeedContainer;
 import com.suatae.mechinasmagick.common.block.BlockAncientSteppingStone;
 import com.suatae.mechinasmagick.common.block.BlockBranch;
+import com.suatae.mechinasmagick.common.block.BlockCache;
 import com.suatae.mechinasmagick.common.block.BlockCatalyst;
 import com.suatae.mechinasmagick.common.block.BlockGoldAncient;
 import com.suatae.mechinasmagick.common.block.BlockIronAncient;
 import com.suatae.mechinasmagick.common.block.BlockLavaStone;
 import com.suatae.mechinasmagick.common.block.BlockOreE;
 import com.suatae.mechinasmagick.common.block.BlockStoneBrick;
+import com.suatae.mechinasmagick.common.block.ItemBlockCache;
 import com.suatae.mechinasmagick.common.block.ItemBlockStoneBrick;
 import com.suatae.mechinasmagick.common.block.blank.BlankEW;
 import com.suatae.mechinasmagick.common.block.blank.BlankNE;
@@ -20,10 +22,6 @@ import com.suatae.mechinasmagick.common.block.blank.BlankNS;
 import com.suatae.mechinasmagick.common.block.blank.BlankNW;
 import com.suatae.mechinasmagick.common.block.blank.BlankSE;
 import com.suatae.mechinasmagick.common.block.blank.BlankSW;
-import com.suatae.mechinasmagick.common.block.cache.BlockCacheC;
-import com.suatae.mechinasmagick.common.block.cache.BlockCacheE;
-import com.suatae.mechinasmagick.common.block.cache.BlockCacheR;
-import com.suatae.mechinasmagick.common.block.cache.BlockCacheU;
 import com.suatae.mechinasmagick.common.block.flint.BlockFlint01;
 import com.suatae.mechinasmagick.common.block.flint.BlockFlint02;
 import com.suatae.mechinasmagick.common.block.flint.BlockFlint03;
@@ -39,14 +37,11 @@ import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorB;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorT;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityCache;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityOreE;
-import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheCommon;
-import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheElite;
-import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheRare;
-import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheUncommon;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint01;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint02;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint03;
@@ -97,11 +92,7 @@ public class BlockReg {
 	public static final Block	SW						= new BlankSW();
 	public static final Block	NW						= new BlankNW();
 
-	public static final Block	blockCacheC				= new BlockCacheC();
-	public static final Block	blockCacheU				= new BlockCacheU();
-	public static final Block	blockCacheR				= new BlockCacheR();
-	public static final Block	blockCacheE				= new BlockCacheE();
-
+	public static final Block	blockCache				= new BlockCache();
 	public static final Block	OREe					= new BlockOreE();
 
 	public static void init() {
@@ -131,11 +122,6 @@ public class BlockReg {
 		GameRegistry.registerBlock(SW, "SW");
 		GameRegistry.registerBlock(NW, "NW");
 
-		GameRegistry.registerBlock(blockCacheC, "blockCacheC");
-		GameRegistry.registerBlock(blockCacheU, "blockCacheU");
-		GameRegistry.registerBlock(blockCacheR, "blockCacheR");
-		GameRegistry.registerBlock(blockCacheE, "blockCacheE");
-
 		GameRegistry.registerBlock(OREe, "OREe");
 
 		GameRegistry.registerTileEntity(TileEntityAncientContainer.class,
@@ -159,10 +145,7 @@ public class BlockReg {
 		GameRegistry.registerTileEntity(TileEntityFlint03.class, "TileEntityFlint03");
 		GameRegistry.registerTileEntity(TileEntityFlint04.class, "TileEntityFlint04");
 
-		GameRegistry.registerTileEntity(TileEntityCacheCommon.class, "TileEntityCacheCommon");
-		GameRegistry.registerTileEntity(TileEntityCacheUncommon.class, "TileEntityCacheUncommon");
-		GameRegistry.registerTileEntity(TileEntityCacheRare.class, "TileEntityCacheRare");
-		GameRegistry.registerTileEntity(TileEntityCacheElite.class, "TileEntityCacheElite");
+		GameRegistry.registerTileEntity(TileEntityCache.class, "TileEntityCache");
 
 		GameRegistry.registerTileEntity(TileEntityAncientDoorB.class, "TileEntityAncientDoorB");
 		GameRegistry.registerTileEntity(TileEntityAncientDoorT.class, "TileEntityAncientDoorT");
@@ -170,6 +153,7 @@ public class BlockReg {
 		GameRegistry.registerTileEntity(TileEntityOreE.class, "TileEntityOreE");
 
 		GameRegistry.registerBlock(blockStoneBrick, ItemBlockStoneBrick.class, "blockStoneBrick");
+		GameRegistry.registerBlock(blockCache, ItemBlockCache.class, "blockCache");
 
 	}
 }

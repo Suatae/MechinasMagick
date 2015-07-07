@@ -29,9 +29,6 @@ import com.suatae.mechinasmagick.client.renders.ir.blocks.IRBranch;
 import com.suatae.mechinasmagick.client.renders.ir.blocks.IRCatalyst;
 import com.suatae.mechinasmagick.client.renders.ir.blocks.IROreE;
 import com.suatae.mechinasmagick.client.renders.ir.blocks.cache.IRCacheC;
-import com.suatae.mechinasmagick.client.renders.ir.blocks.cache.IRCacheE;
-import com.suatae.mechinasmagick.client.renders.ir.blocks.cache.IRCacheR;
-import com.suatae.mechinasmagick.client.renders.ir.blocks.cache.IRCacheU;
 import com.suatae.mechinasmagick.client.renders.ir.blocks.flint.IRBlockFlint01;
 import com.suatae.mechinasmagick.client.renders.ir.blocks.flint.IRBlockFlint02;
 import com.suatae.mechinasmagick.client.renders.ir.blocks.flint.IRBlockFlint03;
@@ -48,14 +45,11 @@ import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorB;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorT;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityCache;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityOreE;
-import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheCommon;
-import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheElite;
-import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheRare;
-import com.suatae.mechinasmagick.common.tileentity.cache.TileEntityCacheUncommon;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint01;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint02;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint03;
@@ -111,10 +105,7 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFlint03.class, r13);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFlint04.class, r14);
 
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheCommon.class, r15);
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheUncommon.class, r16);
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheRare.class, r17);
-		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCacheElite.class, r18);
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCache.class, r15);
 
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAncientDoorB.class, r19);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAncientDoorT.class, r20);
@@ -147,14 +138,8 @@ public class ClientProxy extends CommonProxy {
 				new IRToolIronSteelMallet());
 
 		// Cache
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCacheC),
-				new IRCacheC(r15, new TileEntityCacheCommon()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCacheU),
-				new IRCacheU(r16, new TileEntityCacheUncommon()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCacheR),
-				new IRCacheR(r17, new TileEntityCacheRare()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCacheE),
-				new IRCacheE(r18, new TileEntityCacheElite()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCache),
+				new IRCacheC(r15, new TileEntityCache()));
 
 		// Doors
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockADoorB),

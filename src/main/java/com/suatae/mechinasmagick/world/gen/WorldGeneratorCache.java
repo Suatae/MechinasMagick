@@ -17,19 +17,16 @@ import cpw.mods.fml.common.IWorldGenerator;
 
 
 public class WorldGeneratorCache implements IWorldGenerator {
-	public static Block	AIR			= Blocks.air;
-	public static Block	STONE		= Blocks.stone;
-	public static Block	GRASS		= Blocks.grass;
-	public static Block	SAND		= Blocks.sand;
-	public static Block	GRAVEL		= Blocks.gravel;
-	public static Block	CACHE_01	= BlockReg.blockCacheC;
-	public static Block	CACHE_02	= BlockReg.blockCacheU;
-	public static Block	CACHE_03	= BlockReg.blockCacheR;
-	public static Block	CACHE_04	= BlockReg.blockCacheE;
+	public static Block	AIR		= Blocks.air;
+	public static Block	STONE	= Blocks.stone;
+	public static Block	GRASS	= Blocks.grass;
+	public static Block	SAND	= Blocks.sand;
+	public static Block	GRAVEL	= Blocks.gravel;
+	public static Block	CACHE	= BlockReg.blockCache;
 
-	public static int	Y			= -1;
-	public static int	YY			= 1;
-	public static int	ZZ			= 1;
+	public static int	Y		= -1;
+	public static int	YY		= 1;
+	public static int	ZZ		= 1;
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
@@ -311,7 +308,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint01GenGrass(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_01, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 0, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -324,7 +321,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint01GenStone(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_01, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 0, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -337,7 +334,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint01GenSand(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_01, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 0, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -350,7 +347,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint01GenGravel(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_01, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 0, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -364,7 +361,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint02GenGrass(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_02, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 1, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -377,7 +374,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint02GenStone(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_02, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 1, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -390,7 +387,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint02GenSand(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_02, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 1, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -403,7 +400,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint02GenGravel(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_02, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 1, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -417,7 +414,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint03GenGrass(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_03, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 2, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -430,7 +427,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint03GenStone(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, CACHE_03, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 2, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -443,7 +440,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint03GenSand(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_03, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 2, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -456,7 +453,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint03GenGravel(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_03, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 2, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -470,7 +467,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint04GenGrass(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_04, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 3, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -483,7 +480,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint04GenStone(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_04, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 3, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -497,7 +494,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint04GenSand(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_04, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 3, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -511,7 +508,7 @@ public class WorldGeneratorCache implements IWorldGenerator {
 	private void flint04GenGravel(World world, int X, int Y, int Z) {
 
 		// Cache Block
-		world.setBlock(X, Y, Z, CACHE_04, 0, 2);
+		world.setBlock(X, Y, Z, CACHE, 3, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
