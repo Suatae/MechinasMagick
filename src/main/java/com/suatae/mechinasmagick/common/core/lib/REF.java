@@ -14,7 +14,7 @@ import com.suatae.mechinasmagick.common.init.BlockReg;
 public class REF {
 	public static final String	MOD_ID				= "MechinasMagick";
 	public static final String	MOD_NAME			= "Mechinas Magick";
-	public static final String	VERSION				= "1.7.10-1.20";
+	public static final String	VERSION				= "1.7.10-1.21";
 	public static final String	CLIENTSIDE			= "com.suatae.mechinasmagick.proxy.ClientProxy";
 	public static final String	COMMONSIDE			= "com.suatae.mechinasmagick.proxy.CommonProxy";
 	public static final String	GUI_FACTORY_CLASS	= "com.suatae.mechinasmagick.client.gui.NBGuiFactory";
@@ -186,7 +186,7 @@ public class REF {
 			public final static String	BRICK		= "blockStoneBrick";
 			public final static String	iBRICK		= "MechinasMagick:StoneBrick";
 			public final static String	CATALYST	= "blockCatalyst";
-			public final static String	GCasing		= "blockGoldCasing";
+			public final static String	Casing		= "blockCasing";
 			public final static String	GSCasing	= "blockGoldCasingSeeded";
 			public final static String	GFCasing	= "blockGoldCasingFinal";
 			public final static String	ICasing		= "blockIronCasing";
@@ -194,9 +194,6 @@ public class REF {
 			public final static String	IFCasing	= "blockIronCasingFinal";
 
 			public static final String	C_NAME_C	= "blockCache";
-			public static final String	C_NAME_U	= "blockCacheU";
-			public static final String	C_NAME_R	= "blockCacheR";
-			public static final String	C_NAME_E	= "blockCacheE";
 
 			// Misc
 			public final static String	BRANCH		= "blockBranch";

@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders.ir.blocks.ironcasing;
+package com.suatae.mechinasmagick.client.renders.ir.blocks;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
@@ -7,24 +7,24 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.common.tileentity.ironcasing.TileEntityIronCasingFinal;
+import com.suatae.mechinasmagick.common.tileentity.goldcasing.TileEntityCasing;
 
 
 
 
 
-public class IRIronCasingFinal implements IItemRenderer {
+public class IRCasing implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRIronCasingFinal(TileEntitySpecialRenderer render, TileEntityIronCasingFinal tileEntity) {
+	public IRCasing(TileEntitySpecialRenderer render, TileEntityCasing tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}
 
 	@Override
 	public boolean handleRenderType(ItemStack item, ItemRenderType type) {
-		return true;
+		return false;
 	}
 
 	@Override
@@ -56,4 +56,5 @@ public class IRIronCasingFinal implements IItemRenderer {
 			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
 		}
 	}
+
 }

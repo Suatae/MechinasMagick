@@ -195,10 +195,10 @@ public class MalletIronSteel extends ToolMalletBase {
 					world.func_147480_a(X, Y, Z - 1, false);
 					world.func_147480_a(X + 1, Y, Z, false);
 					world.func_147480_a(X - 1, Y, Z, false);
-					world.setBlock(X, Y, Z, BlockReg.blockGoldCasing);
+					world.setBlock(X, Y, Z, BlockReg.blockCasing, 3, 2);
 					world.createExplosion(Player, X, Y, Z, 5f, false);
 					itemstack.attemptDamageItem(par7, null);
-					if (itemstack.getItemDamage() <= ToolMalletBase.Ironsteeldurability) {
+					if (itemstack.getItemDamage() <= ToolMalletBase.Wooddurability) {
 						world.playSoundEffect(X, Y, Z, REF.SOUND.MALLETHIT, 0.5F, 1.0F);
 					}
 					return true;
@@ -218,50 +218,52 @@ public class MalletIronSteel extends ToolMalletBase {
 					world.func_147480_a(X, Y, Z - 1, false);
 					world.func_147480_a(X + 1, Y, Z, false);
 					world.func_147480_a(X - 1, Y, Z, false);
-					world.setBlock(X, Y, Z, BlockReg.blockIronCasing);
+					world.setBlock(X, Y, Z, BlockReg.blockCasing, 0, 2);
 					world.createExplosion(Player, X, Y, Z, 5f, false);
 					itemstack.attemptDamageItem(par7, null);
-					if (itemstack.getItemDamage() <= ToolMalletBase.Ironsteeldurability) {
+					if (itemstack.getItemDamage() <= ToolMalletBase.Wooddurability) {
 						world.playSoundEffect(X, Y, Z, REF.SOUND.MALLETHIT, 0.5F, 1.0F);
 					}
 					return true;
 				}
 
 				// Gold
+				int gmeta = world.getBlockMetadata(X, Y, Z);
 				Block gcasing = world.getBlock(X, Y, Z);
 				Block fire1 = world.getBlock(X, Y, Z + 1);
 				Block fire2 = world.getBlock(X, Y, Z - 1);
 				Block fire3 = world.getBlock(X + 1, Y, Z);
 				Block fire4 = world.getBlock(X - 1, Y, Z);
-				if (!(gcasing != BlockReg.blockGoldCasingSeeded) && !(fire1 != Blocks.fire)
+				if (!(gcasing != BlockReg.blockCasing) && (gmeta == 4) && !(fire1 != Blocks.fire)
 						&& !(fire2 != Blocks.fire) && !(fire3 != Blocks.fire)
 						&& !(fire4 != Blocks.fire)) {
 					world.func_147480_a(X, Y, Z + 1, false);
 					world.func_147480_a(X, Y, Z - 1, false);
 					world.func_147480_a(X + 1, Y, Z, false);
 					world.func_147480_a(X - 1, Y, Z, false);
-					world.setBlock(X, Y, Z, BlockReg.blockGoldCasingFinal);
+					world.setBlock(X, Y, Z, BlockReg.blockCasing, 5, 2);
 					itemstack.attemptDamageItem(par7, null);
 					world.createExplosion(Player, X, Y, Z, 5f, false);
-					if (itemstack.getItemDamage() <= ToolMalletBase.Ironsteeldurability) {
+					if (itemstack.getItemDamage() <= ToolMalletBase.Wooddurability) {
 						world.playSoundEffect(X, Y, Z, REF.SOUND.MALLETHIT, 0.5F, 1.0F);
 					}
 					return true;
 				}
 
 				// Iron
+				int imeta = world.getBlockMetadata(X, Y, Z);
 				Block icasing = world.getBlock(X, Y, Z);
-				if (!(icasing != BlockReg.blockIronCasingSeeded) && !(fire1 != Blocks.fire)
+				if (!(icasing != BlockReg.blockCasing) && (imeta == 1) && !(fire1 != Blocks.fire)
 						&& !(fire2 != Blocks.fire) && !(fire3 != Blocks.fire)
 						&& !(fire4 != Blocks.fire)) {
 					world.setBlock(X, Y, Z + 1, Blocks.air);
 					world.setBlock(X, Y, Z - 1, Blocks.air);
 					world.setBlock(X - 1, Y, Z, Blocks.air);
 					world.setBlock(X + 1, Y, Z, Blocks.air);
-					world.setBlock(X, Y, Z, BlockReg.blockIronCasingFinal);
+					world.setBlock(X, Y, Z, BlockReg.blockCasing, 2, 2);
 					itemstack.attemptDamageItem(par7, null);
 					world.createExplosion(Player, X, Y, Z, 5f, false);
-					if (itemstack.getItemDamage() <= ToolMalletBase.Ironsteeldurability) {
+					if (itemstack.getItemDamage() <= ToolMalletBase.Wooddurability) {
 						world.playSoundEffect(X, Y, Z, REF.SOUND.MALLETHIT, 0.5F, 1.0F);
 					}
 					return true;

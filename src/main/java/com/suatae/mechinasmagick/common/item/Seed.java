@@ -27,14 +27,15 @@ public class Seed extends ItemBase {
 		if (Player.canPlayerEdit(X, Y, Z, par7, itemstack)) {
 
 			Block block = world.getBlock(X, Y, Z);
+			int meta = world.getBlockMetadata(X, Y, Z);
 
-			if (!(block != BlockReg.blockGoldCasing)) {
-				world.setBlock(X, Y, Z, BlockReg.blockGoldCasingSeeded);
+			if (!(block != BlockReg.blockCasing) && (meta == 3)) {
+				world.setBlock(X, Y, Z, BlockReg.blockCasing, 4, 2);
 				Player.inventory.consumeInventoryItem(this);
 			}
 
-			if (!(block != BlockReg.blockIronCasing)) {
-				world.setBlock(X, Y, Z, BlockReg.blockIronCasingSeeded);
+			if (!(block != BlockReg.blockCasing) && (meta == 0)) {
+				world.setBlock(X, Y, Z, BlockReg.blockCasing, 1, 2);
 				Player.inventory.consumeInventoryItem(this);
 			}
 			return true;

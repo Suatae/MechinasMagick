@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders.ir.blocks.cache;
+package com.suatae.mechinasmagick.client.renders.ir.blocks;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
@@ -11,11 +11,11 @@ import org.lwjgl.opengl.GL11;
 
 
 
-public class IRCacheR implements IItemRenderer {
+public class IRCache implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRCacheR(TileEntitySpecialRenderer render, TileEntity tileEntity) {
+	public IRCache(TileEntitySpecialRenderer render, TileEntity tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}

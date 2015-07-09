@@ -15,14 +15,14 @@ import com.suatae.mechinasmagick.common.core.lib.REF;
 
 
 
-public class TESRGoldCasing extends TileEntitySpecialRenderer {
+public class TESRCasing extends TileEntitySpecialRenderer {
 	private static final ResourceLocation	texture	= new ResourceLocation(
 															REF.MOD_ID.toLowerCase(),
 															"textures/models/casing_gold.png");
 
 	private Casing							model;
 
-	public TESRGoldCasing() {
+	public TESRCasing() {
 		this.model = new Casing();
 
 	}

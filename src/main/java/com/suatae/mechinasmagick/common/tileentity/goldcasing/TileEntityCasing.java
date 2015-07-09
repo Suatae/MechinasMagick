@@ -7,7 +7,7 @@ import net.minecraft.tileentity.TileEntity;
 
 
 
-public class TileEntityGoldCasing extends TileEntity {
+public class TileEntityCasing extends TileEntity {
 
 	@Override
 	public void readFromNBT(NBTTagCompound tag) {

@@ -15,6 +15,7 @@ import com.suatae.mechinasmagick.common.block.BlockLavaStone;
 import com.suatae.mechinasmagick.common.block.BlockOreE;
 import com.suatae.mechinasmagick.common.block.BlockStoneBrick;
 import com.suatae.mechinasmagick.common.block.ItemBlockCache;
+import com.suatae.mechinasmagick.common.block.ItemBlockCasing;
 import com.suatae.mechinasmagick.common.block.ItemBlockStoneBrick;
 import com.suatae.mechinasmagick.common.block.blank.BlankEW;
 import com.suatae.mechinasmagick.common.block.blank.BlankNE;
@@ -26,12 +27,7 @@ import com.suatae.mechinasmagick.common.block.flint.BlockFlint01;
 import com.suatae.mechinasmagick.common.block.flint.BlockFlint02;
 import com.suatae.mechinasmagick.common.block.flint.BlockFlint03;
 import com.suatae.mechinasmagick.common.block.flint.BlockFlint04;
-import com.suatae.mechinasmagick.common.block.goldcasing.BlockGoldCasing;
-import com.suatae.mechinasmagick.common.block.goldcasing.BlockGoldCasingFinal;
-import com.suatae.mechinasmagick.common.block.goldcasing.BlockGoldCasingSeeded;
-import com.suatae.mechinasmagick.common.block.ironcasing.BlockIronCasing;
-import com.suatae.mechinasmagick.common.block.ironcasing.BlockIronCasingFinal;
-import com.suatae.mechinasmagick.common.block.ironcasing.BlockIronCasingSeeded;
+import com.suatae.mechinasmagick.common.block.goldcasing.BlockCasing;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorB;
@@ -46,7 +42,7 @@ import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint01;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint02;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint03;
 import com.suatae.mechinasmagick.common.tileentity.flint.TileEntityFlint04;
-import com.suatae.mechinasmagick.common.tileentity.goldcasing.TileEntityGoldCasing;
+import com.suatae.mechinasmagick.common.tileentity.goldcasing.TileEntityCasing;
 import com.suatae.mechinasmagick.common.tileentity.goldcasing.TileEntityGoldCasingFinal;
 import com.suatae.mechinasmagick.common.tileentity.goldcasing.TileEntityGoldCasingSeeded;
 import com.suatae.mechinasmagick.common.tileentity.ironcasing.TileEntityIronCasing;
@@ -62,38 +58,33 @@ import cpw.mods.fml.common.registry.GameRegistry;
 @GameRegistry.ObjectHolder(REF.MOD_ID)
 public class BlockReg {
 
-	public static final Block	blockAncientGold		= new BlockGoldAncient();
-	public static final Block	blockAncientIron		= new BlockIronAncient();
-	public static final Block	blockLavaStone			= new BlockLavaStone();
-	public static final Block	blockAStepping			= new BlockAncientSteppingStone();
-	public static final Block	blockADoorB				= new BlockAncientDoorB();
-	public static final Block	blockADoorT				= new BlockAncientDoorT();
-	public static final Block	blockASContainer		= new BlockAncientSeedContainer();
-	public static final Block	blockCatalyst			= new BlockCatalyst();
+	public static final Block	blockAncientGold	= new BlockGoldAncient();
+	public static final Block	blockAncientIron	= new BlockIronAncient();
+	public static final Block	blockLavaStone		= new BlockLavaStone();
+	public static final Block	blockAStepping		= new BlockAncientSteppingStone();
+	public static final Block	blockADoorB			= new BlockAncientDoorB();
+	public static final Block	blockADoorT			= new BlockAncientDoorT();
+	public static final Block	blockASContainer	= new BlockAncientSeedContainer();
+	public static final Block	blockCatalyst		= new BlockCatalyst();
 
-	public static final Block	blockStoneBrick			= new BlockStoneBrick();
-	public static final Block	blockGoldCasing			= new BlockGoldCasing();
-	public static final Block	blockGoldCasingSeeded	= new BlockGoldCasingSeeded();
-	public static final Block	blockGoldCasingFinal	= new BlockGoldCasingFinal();
-	public static final Block	blockIronCasing			= new BlockIronCasing();
-	public static final Block	blockIronCasingSeeded	= new BlockIronCasingSeeded();
-	public static final Block	blockIronCasingFinal	= new BlockIronCasingFinal();
-	public static final Block	blockBranch				= new BlockBranch();
+	public static final Block	blockStoneBrick		= new BlockStoneBrick();
+	public static final Block	blockCasing			= new BlockCasing();
+	public static final Block	blockBranch			= new BlockBranch();
 
-	public static final Block	blockFlint01			= new BlockFlint01();
-	public static final Block	blockFlint02			= new BlockFlint02();
-	public static final Block	blockFlint03			= new BlockFlint03();
-	public static final Block	blockFlint04			= new BlockFlint04();
+	public static final Block	blockFlint01		= new BlockFlint01();
+	public static final Block	blockFlint02		= new BlockFlint02();
+	public static final Block	blockFlint03		= new BlockFlint03();
+	public static final Block	blockFlint04		= new BlockFlint04();
 
-	public static final Block	NS						= new BlankNS();
-	public static final Block	EW						= new BlankEW();
-	public static final Block	NE						= new BlankNE();
-	public static final Block	SE						= new BlankSE();
-	public static final Block	SW						= new BlankSW();
-	public static final Block	NW						= new BlankNW();
+	public static final Block	NS					= new BlankNS();
+	public static final Block	EW					= new BlankEW();
+	public static final Block	NE					= new BlankNE();
+	public static final Block	SE					= new BlankSE();
+	public static final Block	SW					= new BlankSW();
+	public static final Block	NW					= new BlankNW();
 
-	public static final Block	blockCache				= new BlockCache();
-	public static final Block	OREe					= new BlockOreE();
+	public static final Block	blockCache			= new BlockCache();
+	public static final Block	OREe				= new BlockOreE();
 
 	public static void init() {
 		GameRegistry.registerBlock(blockAncientGold, "blockGoldAncient");
@@ -104,12 +95,6 @@ public class BlockReg {
 		GameRegistry.registerBlock(blockADoorT, "blockAncientDoorT");
 		GameRegistry.registerBlock(blockASContainer, "blockAncientContainer");
 		GameRegistry.registerBlock(blockCatalyst, "blockCatalyst");
-		GameRegistry.registerBlock(blockGoldCasing, "blockGoldCasing");
-		GameRegistry.registerBlock(blockGoldCasingSeeded, "blockGoldCasingSeeded");
-		GameRegistry.registerBlock(blockGoldCasingFinal, "blockGoldCasingFinal");
-		GameRegistry.registerBlock(blockIronCasing, "blockIronCasing");
-		GameRegistry.registerBlock(blockIronCasingSeeded, "blockIronCasingSeeded");
-		GameRegistry.registerBlock(blockIronCasingFinal, "blockIronCasingFinal");
 		GameRegistry.registerBlock(blockBranch, "blockBranch");
 		GameRegistry.registerBlock(blockFlint01, "blockFlint01");
 		GameRegistry.registerBlock(blockFlint02, "blockFlint02");
@@ -127,7 +112,7 @@ public class BlockReg {
 		GameRegistry.registerTileEntity(TileEntityAncientContainer.class,
 				"TileEntityAncientContainer");
 		GameRegistry.registerTileEntity(TileEntityCatalyst.class, "TileEntityCatalyst");
-		GameRegistry.registerTileEntity(TileEntityGoldCasing.class, "TileEntityGoldCasing");
+		GameRegistry.registerTileEntity(TileEntityCasing.class, "TileEntityGoldCasing");
 		GameRegistry.registerTileEntity(TileEntityGoldCasingSeeded.class,
 				"TileEntityGoldCasingSeeded");
 		GameRegistry.registerTileEntity(TileEntityGoldCasingFinal.class,
@@ -154,6 +139,7 @@ public class BlockReg {
 
 		GameRegistry.registerBlock(blockStoneBrick, ItemBlockStoneBrick.class, "blockStoneBrick");
 		GameRegistry.registerBlock(blockCache, ItemBlockCache.class, "blockCache");
+		GameRegistry.registerBlock(blockCasing, ItemBlockCasing.class, "blockCasing");
 
 	}
 }
