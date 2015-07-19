@@ -64,7 +64,7 @@ public class BlockAncientSeedContainer extends BlockBase implements ITileEntityP
 	@Override
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
-		drops.add(new ItemStack(ItemReg.itemMMSeed));
+		drops.add(new ItemStack(ItemReg.itemSeed));
 		return drops;
 	}
 

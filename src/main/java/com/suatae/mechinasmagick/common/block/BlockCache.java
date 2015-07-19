@@ -28,16 +28,14 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockCache extends Block implements ITileEntityProvider {
 
 	private int				maxMeta	= 4;
-	private final String	name	= REF.NAME.BLOCK.C_NAME_C;
+	private final String	name	= REF.NAME.BLOCK.icache;
 
 	@SideOnly(Side.CLIENT)
 	private IIcon[]			icons;
 
 	public BlockCache() {
 		super(Material.rock);
-		this.setBlockName(REF.NAME.BLOCK.C_NAME_C);
-		this.setBlockTextureName(REF.NAME.BLOCK.C_NAME_C);
-		this.setHardness(2.0f);
+		this.setBlockName(REF.NAME.BLOCK.cache);
 		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setLightOpacity(0);
@@ -89,8 +87,8 @@ public class BlockCache extends Block implements ITileEntityProvider {
 
 	@Override
 	@SideOnly(Side.CLIENT)
-	public IIcon getIcon(int par1, int par2) {
-		return icons[par2];
+	public IIcon getIcon(int side, int meta) {
+		return icons[meta];
 	}
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })

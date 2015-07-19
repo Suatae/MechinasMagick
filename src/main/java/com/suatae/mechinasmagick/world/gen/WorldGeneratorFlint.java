@@ -17,25 +17,23 @@ import cpw.mods.fml.common.IWorldGenerator;
 
 
 public class WorldGeneratorFlint implements IWorldGenerator {
-	public static Block	AIR			= Blocks.air;
-	public static Block	STONE		= Blocks.stone;
-	public static Block	GRASS		= Blocks.grass;
-	public static Block	SAND		= Blocks.sand;
-	public static Block	GRAVEL		= Blocks.gravel;
-	public static Block	FLINT_01	= BlockReg.blockFlint01;
-	public static Block	FLINT_02	= BlockReg.blockFlint02;
-	public static Block	FLINT_03	= BlockReg.blockFlint03;
-	public static Block	FLINT_04	= BlockReg.blockFlint04;
-	public static Block	EW			= BlockReg.EW;
-	public static Block	NS			= BlockReg.NS;
-	public static Block	NE			= BlockReg.NE;
-	public static Block	SE			= BlockReg.SE;
-	public static Block	SW			= BlockReg.SW;
-	public static Block	NW			= BlockReg.NW;
+	public static Block	AIR		= Blocks.air;
+	public static Block	STONE	= Blocks.stone;
+	public static Block	GRASS	= Blocks.grass;
+	public static Block	SAND	= Blocks.sand;
+	public static Block	GRAVEL	= Blocks.gravel;
+	public static Block	FLINT	= BlockReg.blockFlint;
 
-	public static int	Y			= -1;
-	public static int	YY			= 1;
-	public static int	ZZ			= 1;
+	public static Block	EW		= BlockReg.EW;
+	public static Block	NS		= BlockReg.NS;
+	public static Block	NE		= BlockReg.NE;
+	public static Block	SE		= BlockReg.SE;
+	public static Block	SW		= BlockReg.SW;
+	public static Block	NW		= BlockReg.NW;
+
+	public static int	Y		= -1;
+	public static int	YY		= 1;
+	public static int	ZZ		= 1;
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world,
@@ -317,7 +315,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint01GenGrass(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_01, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 0, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -338,7 +336,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint01GenStone(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_01, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 0, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -359,7 +357,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint01GenSand(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_01, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 0, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -380,7 +378,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint01GenGravel(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_01, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 0, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -402,7 +400,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint02GenGrass(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_02, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 1, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -423,7 +421,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint02GenStone(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_02, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 1, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -444,7 +442,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint02GenSand(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_02, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 1, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -465,7 +463,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint02GenGravel(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_02, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 1, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -487,7 +485,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint03GenGrass(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_03, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 2, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -508,7 +506,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint03GenStone(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_03, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 2, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -529,7 +527,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint03GenSand(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_03, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 2, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -550,7 +548,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint03GenGravel(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_03, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 2, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -572,7 +570,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint04GenGrass(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_04, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 3, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -593,7 +591,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint04GenStone(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_04, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 3, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -614,7 +612,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint04GenSand(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_04, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 3, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)
@@ -635,7 +633,7 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 	private void flint04GenGravel(World world, int X, int Y, int Z) {
 
 		// Flint Block
-		world.setBlock(X, Y, Z, FLINT_04, 0, 2);
+		world.setBlock(X, Y, Z, FLINT, 3, 2);
 
 		// Main Y- Blocks
 		for (int i = 0; i < 1; i++)

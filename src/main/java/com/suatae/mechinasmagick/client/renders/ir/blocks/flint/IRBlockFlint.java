@@ -1,4 +1,4 @@
-package com.suatae.mechinasmagick.client.renders.ir.blocks;
+package com.suatae.mechinasmagick.client.renders.ir.blocks.flint;
 
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
@@ -7,15 +7,17 @@ import net.minecraftforge.client.IItemRenderer;
 
 import org.lwjgl.opengl.GL11;
 
+import com.suatae.mechinasmagick.common.tileentity.TileEntityFlint;
 
 
 
 
-public class IRAncientDoorB implements IItemRenderer {
+
+public class IRBlockFlint implements IItemRenderer {
 	TileEntitySpecialRenderer	render;
 	private TileEntity			entity;
 
-	public IRAncientDoorB(TileEntitySpecialRenderer render, TileEntity tileEntity) {
+	public IRBlockFlint(TileEntitySpecialRenderer render, TileEntityFlint tileEntity) {
 		this.entity = tileEntity;
 		this.render = render;
 	}
@@ -33,9 +35,10 @@ public class IRAncientDoorB implements IItemRenderer {
 
 	@Override
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
+
 		if (type == IItemRenderer.ItemRenderType.ENTITY) {
-			GL11.glTranslatef(-0.25F, -0.60F, -0.25F);
-			GL11.glScalef(0.65F, 0.65F, 0.65F);
+			GL11.glTranslatef(-0.75F, -0.5F, -0.75F);
+			GL11.glScalef(1.4F, 1.4F, 1.4F);
 			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
 		}
 		if (type == IItemRenderer.ItemRenderType.EQUIPPED) {
@@ -44,12 +47,16 @@ public class IRAncientDoorB implements IItemRenderer {
 			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
 		}
 		if (type == IItemRenderer.ItemRenderType.EQUIPPED_FIRST_PERSON) {
+			GL11.glTranslatef(-0.1F, 0F, -0.1F);
+			GL11.glScalef(1.2F, 1.2F, 1.2F);
 			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
 		}
 		if (type == IItemRenderer.ItemRenderType.INVENTORY) {
-			GL11.glTranslatef(0F, -0.4F, 0F);
-			GL11.glScalef(0.65F, 0.65F, 0.65F);
+			GL11.glTranslatef(-0.5F, -0.45F, -0.5F);
+			GL11.glScalef(0.5F, 0.5F, 0.5F);
 			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
 		}
+
 	}
+
 }

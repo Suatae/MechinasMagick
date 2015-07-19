@@ -104,7 +104,7 @@ public class BlockBranch extends BlockBase implements ITileEntityProvider {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 
 		drops.add(new ItemStack(this.LEAF(), world.rand.nextInt(3) + 1, 0));
-		drops.add(new ItemStack(this.STICK(), 1, 0));
+		drops.add(new ItemStack(this.STICK(), world.rand.nextInt(10), 0));
 
 		return drops;
 	}

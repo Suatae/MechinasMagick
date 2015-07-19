@@ -8,8 +8,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.Explosion;
 import net.minecraft.world.World;
 
-import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
-
 
 
 
@@ -21,7 +19,6 @@ public class AncientDoorBase extends BlockBase {
 		this.setStepSound(Block.soundTypeStone);
 		this.setBlockUnbreakable();
 		this.setTickRandomly(true);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 		this.setBlockBounds(0.06F, 0, 0, 0.94F, 1.0F, 1.0F);
 	}
 

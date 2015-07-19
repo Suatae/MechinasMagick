@@ -9,9 +9,6 @@ import net.minecraft.item.Item;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-
-import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -31,7 +28,6 @@ public class CropBase extends BlockBush implements IGrowable {
 		this.setTickRandomly(true);
 		this.setHardness(0.0F);
 		this.setStepSound(soundTypeGrass);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
 		this.disableStats();
 
 	}

@@ -7,7 +7,7 @@ import net.minecraft.tileentity.TileEntity;
 
 
 
-public class TileEntityCache extends TileEntity {
+public class TileEntityCasing extends TileEntity {
 
 	private int	i1	= 16;
 
@@ -32,7 +32,7 @@ public class TileEntityCache extends TileEntity {
 				double var1 = this.xCoord + this.worldObj.rand.nextFloat();
 				double var3 = this.yCoord + this.worldObj.rand.nextFloat();
 				double var5 = this.zCoord + this.worldObj.rand.nextFloat();
-				if (this.blockMetadata == 3) {
+				if (this.blockMetadata == 2 || this.blockMetadata == 5) {
 					this.worldObj.spawnParticle("smoke", var1, var3, var5, 0.0D, 0.0D, 0.0D);
 					this.worldObj.spawnParticle("flame", var1, var3, var5, 0.0D, 0.0D, 0.0D);
 				}

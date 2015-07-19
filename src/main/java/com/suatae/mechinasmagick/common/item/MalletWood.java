@@ -40,7 +40,69 @@ public class MalletWood extends ToolMalletBase {
 		else
 			if (Player.canPlayerEdit(X, Y, Z, par7, itemstack)) {
 
+				// Main Center
 				Block block = world.getBlock(X, Y, Z);
+				Block north = world.getBlock(X, Y, Z + 1);
+				Block south = world.getBlock(X, Y, Z - 1);
+				Block east = world.getBlock(X + 1, Y, Z);
+				Block west = world.getBlock(X - 1, Y, Z);
+
+				// RedStone Corners
+				Block northw = world.getBlock(X - 1, Y, Z + 1);
+				Block northe = world.getBlock(X + 1, Y, Z + 1);
+				Block southw = world.getBlock(X - 1, Y, Z - 1);
+				Block southe = world.getBlock(X + 1, Y, Z - 1);
+
+				// Redstone Cross
+				Block north1 = world.getBlock(X, Y, Z + 2);
+				Block south1 = world.getBlock(X, Y, Z - 2);
+				Block east1 = world.getBlock(X + 2, Y, Z);
+				Block west1 = world.getBlock(X - 2, Y, Z);
+
+				// Redstone Cross NorthSouth Corners
+				Block north1w = world.getBlock(X - 1, Y, Z + 2);
+				Block north1e = world.getBlock(X + 1, Y, Z + 2);
+				Block south1w = world.getBlock(X - 1, Y, Z - 2);
+				Block south1e = world.getBlock(X + 1, Y, Z - 2);
+
+				// Redstone Cross EastWest Corners
+				Block east1n = world.getBlock(X + 2, Y, Z + 1);
+				Block east1s = world.getBlock(X + 2, Y, Z - 1);
+				Block west1n = world.getBlock(X - 2, Y, Z + 1);
+				Block west1s = world.getBlock(X - 2, Y, Z - 1);
+
+				// Center -y
+				Block blockNEGy = world.getBlock(X, Y - 1, Z);
+				Block northNEGy = world.getBlock(X, Y - 1, Z + 1);
+				Block southNEGy = world.getBlock(X, Y - 1, Z - 1);
+				Block eastNEGy = world.getBlock(X + 1, Y - 1, Z);
+				Block westNEGy = world.getBlock(X - 1, Y - 1, Z);
+
+				// Corners -y
+				Block northwNEGy = world.getBlock(X - 1, Y - 1, Z + 1);
+				Block northeNEGy = world.getBlock(X + 1, Y - 1, Z + 1);
+				Block southwNEGy = world.getBlock(X - 1, Y - 1, Z - 1);
+				Block southeNEGy = world.getBlock(X + 1, Y - 1, Z - 1);
+
+				// Cross -y
+				Block north1NEGy = world.getBlock(X, Y - 1, Z + 2);
+				Block south1NEGy = world.getBlock(X, Y - 1, Z - 2);
+				Block east1NEGy = world.getBlock(X + 2, Y - 1, Z);
+				Block west1NEGy = world.getBlock(X - 2, Y - 1, Z);
+
+				// Cross NorthSouth -y
+				Block north1wNEGy = world.getBlock(X - 1, Y - 1, Z + 2);
+				Block north1eNEGy = world.getBlock(X + 1, Y - 1, Z + 2);
+				Block south1wNEGy = world.getBlock(X - 1, Y - 1, Z - 2);
+				Block south1eNEGy = world.getBlock(X + 1, Y - 1, Z - 2);
+
+				// Cross EastWest -y
+				Block east1nNEGy = world.getBlock(X + 2, Y - 1, Z + 1);
+				Block east1sNEGy = world.getBlock(X + 2, Y - 1, Z - 1);
+				Block west1nNEGy = world.getBlock(X - 2, Y - 1, Z + 1);
+				Block west1sNEGy = world.getBlock(X - 2, Y - 1, Z - 1);
+
+				int meta = world.getBlockMetadata(X, Y, Z);
 
 				if (!(block != REF.BLOCK.lavaS)) {
 					world.func_147480_a(X, Y, Z, false);
@@ -53,14 +115,36 @@ public class MalletWood extends ToolMalletBase {
 					return true;
 				}
 				// Gold
-				Block Gold = world.getBlock(X, Y, Z);
-				Block GoldN = world.getBlock(X, Y, Z + 1);
-				Block GoldS = world.getBlock(X, Y, Z - 1);
-				Block GoldE = world.getBlock(X + 1, Y, Z);
-				Block GoldW = world.getBlock(X - 1, Y, Z);
-				if (!(Gold != Blocks.gold_block) && !(GoldN != Blocks.gold_block)
-						&& !(GoldS != Blocks.gold_block) && !(GoldE != Blocks.gold_block)
-						&& !(GoldW != Blocks.gold_block)) {
+				if (!(block != Blocks.gold_block) && !(north != Blocks.gold_block)
+						&& !(south != Blocks.gold_block) && !(east != Blocks.gold_block)
+						&& !(west != Blocks.gold_block) && !(northw != Blocks.redstone_wire)
+						&& !(northe != Blocks.redstone_wire) && !(southw != Blocks.redstone_wire)
+						&& !(southe != Blocks.redstone_wire)
+
+						&& !(north1 != Blocks.redstone_wire) && !(south1 != Blocks.redstone_wire)
+						&& !(east1 != Blocks.redstone_wire) && !(west1 != Blocks.redstone_wire)
+
+						&& !(north1w != Blocks.redstone_wire) && !(north1e != Blocks.redstone_wire)
+						&& !(south1w != Blocks.redstone_wire) && !(south1e != Blocks.redstone_wire)
+
+						&& !(east1n != Blocks.redstone_wire) && !(east1s != Blocks.redstone_wire)
+						&& !(west1n != Blocks.redstone_wire) && !(west1s != Blocks.redstone_wire)
+
+						&& !(blockNEGy != BlockReg.blockCatalyst) && (northNEGy != Blocks.air)
+						&& (southNEGy != Blocks.air) && (eastNEGy != Blocks.air)
+						&& (westNEGy != Blocks.air)
+
+						&& (northwNEGy != Blocks.air) && (northeNEGy != Blocks.air)
+						&& (southwNEGy != Blocks.air) && (southeNEGy != Blocks.air)
+
+						&& (north1NEGy != Blocks.air) && (south1NEGy != Blocks.air)
+						&& (east1NEGy != Blocks.air) && (west1NEGy != Blocks.air)
+
+						&& (north1wNEGy != Blocks.air) && (north1eNEGy != Blocks.air)
+						&& (south1wNEGy != Blocks.air) && (south1eNEGy != Blocks.air)
+
+						&& (east1nNEGy != Blocks.air) && (east1sNEGy != Blocks.air)
+						&& (west1nNEGy != Blocks.air) && (west1sNEGy != Blocks.air)) {
 					world.func_147480_a(X, Y, Z + 1, false);
 					world.func_147480_a(X, Y, Z - 1, false);
 					world.func_147480_a(X + 1, Y, Z, false);
@@ -76,14 +160,36 @@ public class MalletWood extends ToolMalletBase {
 				}
 
 				// Iron
-				Block Iron = world.getBlock(X, Y, Z);
-				Block IronN = world.getBlock(X, Y, Z + 1);
-				Block IronS = world.getBlock(X, Y, Z - 1);
-				Block IronE = world.getBlock(X + 1, Y, Z);
-				Block IronW = world.getBlock(X - 1, Y, Z);
-				if (!(Iron != Blocks.iron_block) && !(IronN != Blocks.iron_block)
-						&& !(IronS != Blocks.iron_block) && !(IronE != Blocks.iron_block)
-						&& !(IronW != Blocks.iron_block)) {
+				if (!(block != Blocks.iron_block) && !(north != Blocks.iron_block)
+						&& !(south != Blocks.iron_block) && !(east != Blocks.iron_block)
+						&& !(west != Blocks.iron_block) && !(northw != Blocks.redstone_wire)
+						&& !(northe != Blocks.redstone_wire) && !(southw != Blocks.redstone_wire)
+						&& !(southe != Blocks.redstone_wire)
+
+						&& !(north1 != Blocks.redstone_wire) && !(south1 != Blocks.redstone_wire)
+						&& !(east1 != Blocks.redstone_wire) && !(west1 != Blocks.redstone_wire)
+
+						&& !(north1w != Blocks.redstone_wire) && !(north1e != Blocks.redstone_wire)
+						&& !(south1w != Blocks.redstone_wire) && !(south1e != Blocks.redstone_wire)
+
+						&& !(east1n != Blocks.redstone_wire) && !(east1s != Blocks.redstone_wire)
+						&& !(west1n != Blocks.redstone_wire) && !(west1s != Blocks.redstone_wire)
+
+						&& !(blockNEGy != BlockReg.blockCatalyst) && (northNEGy != Blocks.air)
+						&& (southNEGy != Blocks.air) && (eastNEGy != Blocks.air)
+						&& (westNEGy != Blocks.air)
+
+						&& (northwNEGy != Blocks.air) && (northeNEGy != Blocks.air)
+						&& (southwNEGy != Blocks.air) && (southeNEGy != Blocks.air)
+
+						&& (north1NEGy != Blocks.air) && (south1NEGy != Blocks.air)
+						&& (east1NEGy != Blocks.air) && (west1NEGy != Blocks.air)
+
+						&& (north1wNEGy != Blocks.air) && (north1eNEGy != Blocks.air)
+						&& (south1wNEGy != Blocks.air) && (south1eNEGy != Blocks.air)
+
+						&& (east1nNEGy != Blocks.air) && (east1sNEGy != Blocks.air)
+						&& (west1nNEGy != Blocks.air) && (west1sNEGy != Blocks.air)) {
 					world.func_147480_a(X, Y, Z + 1, false);
 					world.func_147480_a(X, Y, Z - 1, false);
 					world.func_147480_a(X + 1, Y, Z, false);
@@ -98,15 +204,37 @@ public class MalletWood extends ToolMalletBase {
 				}
 
 				// Gold
-				int gmeta = world.getBlockMetadata(X, Y, Z);
-				Block gcasing = world.getBlock(X, Y, Z);
-				Block fire1 = world.getBlock(X, Y, Z + 1);
-				Block fire2 = world.getBlock(X, Y, Z - 1);
-				Block fire3 = world.getBlock(X + 1, Y, Z);
-				Block fire4 = world.getBlock(X - 1, Y, Z);
-				if (!(gcasing != BlockReg.blockCasing) && (gmeta == 4) && !(fire1 != Blocks.fire)
-						&& !(fire2 != Blocks.fire) && !(fire3 != Blocks.fire)
-						&& !(fire4 != Blocks.fire)) {
+
+				if (!(block != BlockReg.blockCasing) && (meta == 4) && !(north != Blocks.fire)
+						&& !(south != Blocks.fire) && !(east != Blocks.fire)
+						&& !(west != Blocks.fire) && !(northw != Blocks.redstone_wire)
+						&& !(northe != Blocks.redstone_wire) && !(southw != Blocks.redstone_wire)
+						&& !(southe != Blocks.redstone_wire)
+
+						&& !(north1 != Blocks.redstone_wire) && !(south1 != Blocks.redstone_wire)
+						&& !(east1 != Blocks.redstone_wire) && !(west1 != Blocks.redstone_wire)
+
+						&& !(north1w != Blocks.redstone_wire) && !(north1e != Blocks.redstone_wire)
+						&& !(south1w != Blocks.redstone_wire) && !(south1e != Blocks.redstone_wire)
+
+						&& !(east1n != Blocks.redstone_wire) && !(east1s != Blocks.redstone_wire)
+						&& !(west1n != Blocks.redstone_wire) && !(west1s != Blocks.redstone_wire)
+
+						&& !(blockNEGy != BlockReg.blockCatalyst) && (northNEGy != Blocks.air)
+						&& (southNEGy != Blocks.air) && (eastNEGy != Blocks.air)
+						&& (westNEGy != Blocks.air)
+
+						&& (northwNEGy != Blocks.air) && (northeNEGy != Blocks.air)
+						&& (southwNEGy != Blocks.air) && (southeNEGy != Blocks.air)
+
+						&& (north1NEGy != Blocks.air) && (south1NEGy != Blocks.air)
+						&& (east1NEGy != Blocks.air) && (west1NEGy != Blocks.air)
+
+						&& (north1wNEGy != Blocks.air) && (north1eNEGy != Blocks.air)
+						&& (south1wNEGy != Blocks.air) && (south1eNEGy != Blocks.air)
+
+						&& (east1nNEGy != Blocks.air) && (east1sNEGy != Blocks.air)
+						&& (west1nNEGy != Blocks.air) && (west1sNEGy != Blocks.air)) {
 					world.func_147480_a(X, Y, Z + 1, false);
 					world.func_147480_a(X, Y, Z - 1, false);
 					world.func_147480_a(X + 1, Y, Z, false);
@@ -121,15 +249,40 @@ public class MalletWood extends ToolMalletBase {
 				}
 
 				// Iron
-				int imeta = world.getBlockMetadata(X, Y, Z);
-				Block icasing = world.getBlock(X, Y, Z);
-				if (!(icasing != BlockReg.blockCasing) && (imeta == 1) && !(fire1 != Blocks.fire)
-						&& !(fire2 != Blocks.fire) && !(fire3 != Blocks.fire)
-						&& !(fire4 != Blocks.fire)) {
-					world.setBlock(X, Y, Z + 1, Blocks.air);
-					world.setBlock(X, Y, Z - 1, Blocks.air);
-					world.setBlock(X - 1, Y, Z, Blocks.air);
-					world.setBlock(X + 1, Y, Z, Blocks.air);
+				if (!(block != BlockReg.blockCasing) && (meta == 1) && !(north != Blocks.fire)
+						&& !(south != Blocks.fire) && !(east != Blocks.fire)
+						&& !(west != Blocks.fire) && !(northw != Blocks.redstone_wire)
+						&& !(northe != Blocks.redstone_wire) && !(southw != Blocks.redstone_wire)
+						&& !(southe != Blocks.redstone_wire)
+
+						&& !(north1 != Blocks.redstone_wire) && !(south1 != Blocks.redstone_wire)
+						&& !(east1 != Blocks.redstone_wire) && !(west1 != Blocks.redstone_wire)
+
+						&& !(north1w != Blocks.redstone_wire) && !(north1e != Blocks.redstone_wire)
+						&& !(south1w != Blocks.redstone_wire) && !(south1e != Blocks.redstone_wire)
+
+						&& !(east1n != Blocks.redstone_wire) && !(east1s != Blocks.redstone_wire)
+						&& !(west1n != Blocks.redstone_wire) && !(west1s != Blocks.redstone_wire)
+
+						&& !(blockNEGy != BlockReg.blockCatalyst) && (northNEGy != Blocks.air)
+						&& (southNEGy != Blocks.air) && (eastNEGy != Blocks.air)
+						&& (westNEGy != Blocks.air)
+
+						&& (northwNEGy != Blocks.air) && (northeNEGy != Blocks.air)
+						&& (southwNEGy != Blocks.air) && (southeNEGy != Blocks.air)
+
+						&& (north1NEGy != Blocks.air) && (south1NEGy != Blocks.air)
+						&& (east1NEGy != Blocks.air) && (west1NEGy != Blocks.air)
+
+						&& (north1wNEGy != Blocks.air) && (north1eNEGy != Blocks.air)
+						&& (south1wNEGy != Blocks.air) && (south1eNEGy != Blocks.air)
+
+						&& (east1nNEGy != Blocks.air) && (east1sNEGy != Blocks.air)
+						&& (west1nNEGy != Blocks.air) && (west1sNEGy != Blocks.air)) {
+					world.func_147480_a(X, Y, Z + 1, false);
+					world.func_147480_a(X, Y, Z - 1, false);
+					world.func_147480_a(X + 1, Y, Z, false);
+					world.func_147480_a(X - 1, Y, Z, false);
 					world.setBlock(X, Y, Z, BlockReg.blockCasing, 2, 2);
 					itemstack.attemptDamageItem(par7, null);
 					world.createExplosion(Player, X, Y, Z, 5f, false);

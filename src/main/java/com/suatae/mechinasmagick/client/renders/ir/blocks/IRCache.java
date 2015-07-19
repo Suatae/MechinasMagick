@@ -46,6 +46,7 @@ public class IRCache implements IItemRenderer {
 			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
 		}
 		if (type == IItemRenderer.ItemRenderType.INVENTORY) {
+			GL11.glTranslatef(0F, -0.1F, 0F);
 			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);
 		}
 	}

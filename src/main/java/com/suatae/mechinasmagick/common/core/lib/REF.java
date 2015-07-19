@@ -14,7 +14,7 @@ import com.suatae.mechinasmagick.common.init.BlockReg;
 public class REF {
 	public static final String	MOD_ID				= "MechinasMagick";
 	public static final String	MOD_NAME			= "Mechinas Magick";
-	public static final String	VERSION				= "1.7.10-1.21";
+	public static final String	VERSION				= "1.7.10-1.22";
 	public static final String	CLIENTSIDE			= "com.suatae.mechinasmagick.proxy.ClientProxy";
 	public static final String	COMMONSIDE			= "com.suatae.mechinasmagick.proxy.CommonProxy";
 	public static final String	GUI_FACTORY_CLASS	= "com.suatae.mechinasmagick.client.gui.NBGuiFactory";
@@ -96,13 +96,13 @@ public class REF {
 			public final static Block	SOIL	= BlockReg.blockCatalyst;
 
 			public static class GOLD {
-				public final static Block	PLANT		= BlockReg.blockAncientGold;
+				public final static Block	PLANT		= BlockReg.blockGoldCrop;
 				public final static Block	CAP			= Blocks.gold_block;
 				public final static Block	ACTIVATOR	= Blocks.air;
 			}
 
 			public static class IRON {
-				public final static Block	PLANT		= BlockReg.blockAncientIron;
+				public final static Block	PLANT		= BlockReg.blockIronCrop;
 				public final static Block	CAP			= Blocks.iron_block;
 				public final static Block	ACTIVATOR	= Blocks.air;
 
@@ -123,14 +123,10 @@ public class REF {
 			public final static String	SEED		= "itemSeed";
 
 			// Gold Seed
-			public final static String	SEEDGE		= "itemSeedEncasedGold";
-			public final static String	SEEDGC		= "itemSeedCuredGold";
 			public final static String	SEEDGP		= "itemSeedPrimedGold";
 			public final static String	FRUITG		= "fruitAncientGold";
 
 			// Iron Seed
-			public final static String	SEEDIE		= "itemSeedEncasedIron";
-			public final static String	SEEDIC		= "itemSeedCuredIron";
 			public final static String	SEEDIP		= "itemSeedPrimedIron";
 			public final static String	FRUITI		= "fruitAncientIron";
 
@@ -142,7 +138,6 @@ public class REF {
 			// MIsc
 			public final static String	LEAF		= "itemLeaf";
 			public final static String	BRANCH		= "itemBranch";
-			public final static String	PLANTFIBER	= "itemPlantFiber";
 
 			// Player Class
 			public final static String	BUILDER		= "itemBuilder";
@@ -153,26 +148,24 @@ public class REF {
 		public static class BLOCK {
 
 			// Gold Plant
-			public final static String	GOLD		= "blockGoldAncient";
-			public final static String	GOLD00		= "MechinasMagick:ancient_gold_0";
-			public final static String	GOLD01		= "MechinasMagick:ancient_gold_1";
-			public final static String	GOLD02		= "MechinasMagick:ancient_gold_2";
-			public final static String	GOLD03		= "MechinasMagick:ancient_gold_3";
-			public final static String	GOLD04		= "MechinasMagick:ancient_gold_4";
+			public final static String	GOLD		= "blockGoldCrop";
+			public final static String	GOLD00		= "MechinasMagick:blockGoldCrop_0";
+			public final static String	GOLD01		= "MechinasMagick:blockGoldCrop_1";
+			public final static String	GOLD02		= "MechinasMagick:blockGoldCrop_2";
+			public final static String	GOLD03		= "MechinasMagick:blockGoldCrop_3";
+			public final static String	GOLD04		= "MechinasMagick:blockGoldCrop_4";
 
 			// Iron PLant
-			public final static String	IRON		= "blockIronAncient";
-			public final static String	IRON00		= "MechinasMagick:ancient_Iron_0";
-			public final static String	IRON01		= "MechinasMagick:ancient_Iron_1";
-			public final static String	IRON02		= "MechinasMagick:ancient_Iron_2";
-			public final static String	IRON03		= "MechinasMagick:ancient_Iron_3";
-			public final static String	IRON04		= "MechinasMagick:ancient_Iron_4";
+			public final static String	IRON		= "blockIronCrop";
+			public final static String	IRON00		= "MechinasMagick:blockIronCrop_0";
+			public final static String	IRON01		= "MechinasMagick:blockIronCrop_1";
+			public final static String	IRON02		= "MechinasMagick:blockIronCrop_2";
+			public final static String	IRON03		= "MechinasMagick:blockIronCrop_3";
+			public final static String	IRON04		= "MechinasMagick:blockIronCrop_4";
 
 			// Flint
-			public final static String	F_01_NAME	= "blockFlint01";
-			public final static String	F_02_NAME	= "blockFlint02";
-			public final static String	F_03_NAME	= "blockFlint03";
-			public final static String	F_04_NAME	= "blockFlint04";
+			public final static String	flint		= "blockFlint";
+			public final static String	flint00		= "MechinasMagick:blockFlint";
 
 			public final static String	nul			= "null";
 
@@ -187,13 +180,9 @@ public class REF {
 			public final static String	iBRICK		= "MechinasMagick:StoneBrick";
 			public final static String	CATALYST	= "blockCatalyst";
 			public final static String	Casing		= "blockCasing";
-			public final static String	GSCasing	= "blockGoldCasingSeeded";
-			public final static String	GFCasing	= "blockGoldCasingFinal";
-			public final static String	ICasing		= "blockIronCasing";
-			public final static String	ISCasing	= "blockIronCasingSeeded";
-			public final static String	IFCasing	= "blockIronCasingFinal";
-
-			public static final String	C_NAME_C	= "blockCache";
+			public final static String	iCasing		= "MechinasMagick:blockCasing";
+			public static final String	cache		= "blockCache";
+			public static final String	icache		= "MechinasMagick:blockCache";
 
 			// Misc
 			public final static String	BRANCH		= "blockBranch";

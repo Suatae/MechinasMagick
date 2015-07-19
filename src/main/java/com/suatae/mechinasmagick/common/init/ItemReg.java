@@ -12,7 +12,6 @@ import com.suatae.mechinasmagick.common.item.Mage;
 import com.suatae.mechinasmagick.common.item.MalletIronSteel;
 import com.suatae.mechinasmagick.common.item.MalletStone;
 import com.suatae.mechinasmagick.common.item.MalletWood;
-import com.suatae.mechinasmagick.common.item.PlantFiber;
 import com.suatae.mechinasmagick.common.item.Seed;
 import com.suatae.mechinasmagick.common.item.goldseed.GoldAncientFruit;
 import com.suatae.mechinasmagick.common.item.goldseed.GoldSeedPrimed;
@@ -36,7 +35,7 @@ public class ItemReg {
 																250, 0, 2.0F, 0);
 
 	// Seed
-	public static final Item	itemMMSeed				= new Seed();
+	public static final Item	itemSeed				= new Seed();
 
 	// Gold Seed
 	public static final Item	itemPrimedGold			= new GoldSeedPrimed();
@@ -54,7 +53,6 @@ public class ItemReg {
 
 	// Misc
 	public static final Item	itemLeaf				= new Leaf();
-	public static final Item	itemPlantFiber			= new PlantFiber();
 
 	// Player Class
 	public static final Item	itemBuilder				= new Builder();
@@ -64,7 +62,7 @@ public class ItemReg {
 	public static void init() {
 
 		// Seed
-		GameRegistry.registerItem(itemMMSeed, "itemSeed");
+		GameRegistry.registerItem(itemSeed, "itemSeed");
 
 		// Gold Seed
 		GameRegistry.registerItem(itemPrimedGold, "itemSeedPrimedGold");
@@ -81,7 +79,6 @@ public class ItemReg {
 
 		// Misc
 		GameRegistry.registerItem(itemLeaf, "itemLeaf");
-		GameRegistry.registerItem(itemPlantFiber, "itemPlantFiber");
 
 		// Player Class
 		GameRegistry.registerItem(itemBuilder, "itemBuilder");
