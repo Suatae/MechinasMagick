@@ -10,9 +10,10 @@ import com.suatae.mechinasmagick.client.renders.TESRBlockCache;
 import com.suatae.mechinasmagick.client.renders.TESRBranch;
 import com.suatae.mechinasmagick.client.renders.TESRCasing;
 import com.suatae.mechinasmagick.client.renders.TESRCatalyst;
+import com.suatae.mechinasmagick.client.renders.TESRCrystalCrop;
 import com.suatae.mechinasmagick.client.renders.TESRGoldCrop;
 import com.suatae.mechinasmagick.client.renders.TESRIronCrop;
-import com.suatae.mechinasmagick.client.renders.TESROreE;
+import com.suatae.mechinasmagick.client.renders.TESRCrystalOre;
 import com.suatae.mechinasmagick.client.renders.flint.TESRBlockFlint;
 import com.suatae.mechinasmagick.client.renders.ir.IRSeed;
 import com.suatae.mechinasmagick.client.renders.ir.IRToolIronSteelMallet;
@@ -32,6 +33,7 @@ import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCache;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCasing;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityCrystalCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityFlint;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
@@ -51,10 +53,11 @@ public class ClientProxy extends CommonProxy {
 	TileEntitySpecialRenderer	c	= new TESRCatalyst();
 	TileEntitySpecialRenderer	c1	= new TESRCasing();
 	TileEntitySpecialRenderer	c2	= new TESRBlockCache();
+	TileEntitySpecialRenderer	dc	= new TESRCrystalCrop();
 	TileEntitySpecialRenderer	f1	= new TESRBlockFlint();
 	TileEntitySpecialRenderer	gc	= new TESRGoldCrop();
 	TileEntitySpecialRenderer	ic	= new TESRIronCrop();
-	TileEntitySpecialRenderer	o	= new TESROreE();
+	TileEntitySpecialRenderer	o	= new TESRCrystalOre();
 
 	@Override
 	public void registerTESRender() {
@@ -65,6 +68,7 @@ public class ClientProxy extends CommonProxy {
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCatalyst.class, c);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCasing.class, c1);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCache.class, c2);
+		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityCrystalCrop.class, dc);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityFlint.class, f1);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityGoldCrop.class, gc);
 		ClientRegistry.bindTileEntitySpecialRenderer(TileEntityIronCrop.class, ic);
@@ -113,7 +117,7 @@ public class ClientProxy extends CommonProxy {
 				new IRCatalyst(c, new TileEntityCatalyst()));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockBranch),
 				new IRBranch(b, new TileEntityBranch()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.OREe), new IROreE(
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCrystalOre), new IROreE(
 				o, new TileEntityOreE()));
 
 	}

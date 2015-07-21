@@ -13,7 +13,7 @@ import org.lwjgl.opengl.GL11;
 /**
  * Ore - Suatae Created using Tabula 4.1.1
  */
-public class OreE extends ModelBase {
+public class CrystalOre extends ModelBase {
 	public ModelRenderer	BaseBlock;
 	public ModelRenderer	shape19;
 	public ModelRenderer	shape19_1;
@@ -34,7 +34,7 @@ public class OreE extends ModelBase {
 	public ModelRenderer	shape19_16;
 	public ModelRenderer	shape19_17;
 
-	public OreE() {
+	public CrystalOre() {
 		this.textureWidth = 64;
 		this.textureHeight = 64;
 		this.shape19_3 = new ModelRenderer(this, 0, 22);

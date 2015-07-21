@@ -61,7 +61,7 @@ public class ConfigUtil {
 		else {}
 
 		// Debug Mode
-		DebugMode = configuration.getBoolean("DebugMode", REF.DEBUG, Debug, Debug_comment);
+		DebugMode = configuration.getBoolean("DebugMode", REF.debug, Debug, Debug_comment);
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("Debug Mode: " + DebugMode);

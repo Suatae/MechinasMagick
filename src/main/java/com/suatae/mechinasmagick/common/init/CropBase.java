@@ -17,18 +17,19 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 
 public class CropBase extends BlockBush implements IGrowable {
-	protected int		maxGrowthStage	= 10;
+	protected int		maxGrowthStage;
 
 	@SideOnly(Side.CLIENT)
 	protected IIcon[]	iIcon;
 
-	public CropBase(Material mat) {
+	public CropBase(Material mat, int MaxGrowthStage) {
 
 		super(mat);
 		this.setTickRandomly(true);
 		this.setHardness(0.0F);
 		this.setStepSound(soundTypeGrass);
 		this.disableStats();
+		maxGrowthStage = MaxGrowthStage;
 
 	}
 
@@ -65,8 +66,7 @@ public class CropBase extends BlockBush implements IGrowable {
 	}
 
 	@Override
-	public boolean func_149852_a(World p_149852_1_, Random Rand, int p_149852_3_, int p_149852_4_,
-			int p_149852_5_) {
+	public boolean func_149852_a(World world, Random Rand, int x, int y, int z) {
 		return true;
 	}
 

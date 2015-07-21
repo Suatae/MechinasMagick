@@ -6,6 +6,7 @@ import net.minecraftforge.common.util.EnumHelper;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.item.Builder;
+import com.suatae.mechinasmagick.common.item.Crystal;
 import com.suatae.mechinasmagick.common.item.Engineer;
 import com.suatae.mechinasmagick.common.item.Leaf;
 import com.suatae.mechinasmagick.common.item.Mage;
@@ -42,9 +43,11 @@ public class ItemReg {
 	public static final Item	itemAncientFruitGold	= new GoldAncientFruit();
 
 	// Iron Seed
-
 	public static final Item	itemPrimedIron			= new IronSeedPrimed();
 	public static final Item	itemAncientFruitIron	= new IronAncientFruit();
+
+	// Crystal Seed
+	public static final Item	itemCrystal				= new Crystal();
 
 	// Tools
 	public static final Item	woodMallet				= new MalletWood();
@@ -71,6 +74,9 @@ public class ItemReg {
 		// Iron Seed
 		GameRegistry.registerItem(itemPrimedIron, "itemSeedPrimedIron");
 		GameRegistry.registerItem(itemAncientFruitIron, "fruitAncientIron");
+
+		// Crystal Seed
+		GameRegistry.registerItem(itemCrystal, "itemCrystal");
 
 		// Tools
 		GameRegistry.registerItem(woodMallet, "woodMallet");

@@ -3,6 +3,7 @@ package com.suatae.mechinasmagick.common.core.handler;
 import com.suatae.mechinasmagick.world.gen.WorldGenLavaBubble;
 import com.suatae.mechinasmagick.world.gen.WorldGenOre;
 import com.suatae.mechinasmagick.world.gen.WorldGenSeedPillar;
+import com.suatae.mechinasmagick.world.gen.WorldGeneratorBranch;
 import com.suatae.mechinasmagick.world.gen.WorldGeneratorCache;
 import com.suatae.mechinasmagick.world.gen.WorldGeneratorFlint;
 
@@ -19,6 +20,7 @@ public class GenHandler {
 		GameRegistry.registerWorldGenerator(new WorldGenSeedPillar(), 0);
 		GameRegistry.registerWorldGenerator(new WorldGeneratorFlint(), 0);
 		GameRegistry.registerWorldGenerator(new WorldGeneratorCache(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGeneratorBranch(), 0);
 	}
 
 	public static void Init() {}

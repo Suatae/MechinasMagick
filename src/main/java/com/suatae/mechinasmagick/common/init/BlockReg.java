@@ -10,11 +10,13 @@ import com.suatae.mechinasmagick.common.block.BlockBranch;
 import com.suatae.mechinasmagick.common.block.BlockCache;
 import com.suatae.mechinasmagick.common.block.BlockCasing;
 import com.suatae.mechinasmagick.common.block.BlockCatalyst;
+import com.suatae.mechinasmagick.common.block.BlockCrystalBlock;
+import com.suatae.mechinasmagick.common.block.BlockCrystalCrop;
+import com.suatae.mechinasmagick.common.block.BlockCrystalOre;
 import com.suatae.mechinasmagick.common.block.BlockFlint;
 import com.suatae.mechinasmagick.common.block.BlockGoldCrop;
 import com.suatae.mechinasmagick.common.block.BlockIronCrop;
 import com.suatae.mechinasmagick.common.block.BlockLavaStone;
-import com.suatae.mechinasmagick.common.block.BlockOreE;
 import com.suatae.mechinasmagick.common.block.BlockStoneBrick;
 import com.suatae.mechinasmagick.common.block.ItemBlockCache;
 import com.suatae.mechinasmagick.common.block.ItemBlockCasing;
@@ -34,6 +36,7 @@ import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCache;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCasing;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCatalyst;
+import com.suatae.mechinasmagick.common.tileentity.TileEntityCrystalCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityFlint;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
@@ -50,6 +53,8 @@ public class BlockReg {
 
 	public static final Block	blockGoldCrop		= new BlockGoldCrop();
 	public static final Block	blockIronCrop		= new BlockIronCrop();
+	public static final Block	blockCrystalCrop	= new BlockCrystalCrop();
+
 	public static final Block	blockLavaStone		= new BlockLavaStone();
 	public static final Block	blockAStepping		= new BlockAncientSteppingStone();
 	public static final Block	blockADoorB			= new BlockAncientDoorB();
@@ -62,6 +67,7 @@ public class BlockReg {
 	public static final Block	blockBranch			= new BlockBranch();
 
 	public static final Block	blockFlint			= new BlockFlint();
+	public static final Block	blockCrystalBlock	= new BlockCrystalBlock();
 
 	public static final Block	NS					= new BlankNS();
 	public static final Block	EW					= new BlankEW();
@@ -71,11 +77,13 @@ public class BlockReg {
 	public static final Block	NW					= new BlankNW();
 
 	public static final Block	blockCache			= new BlockCache();
-	public static final Block	OREe				= new BlockOreE();
+	public static final Block	blockCrystalOre		= new BlockCrystalOre();
 
 	public static void init() {
 		GameRegistry.registerBlock(blockGoldCrop, "blockGoldCrop");
 		GameRegistry.registerBlock(blockIronCrop, "blockIronCrop");
+		GameRegistry.registerBlock(blockCrystalCrop, "blockCrystalCrop");
+
 		GameRegistry.registerBlock(blockLavaStone, "blockLavaStone");
 		GameRegistry.registerBlock(blockAStepping, "blockAncientSteppingStone");
 		GameRegistry.registerBlock(blockADoorB, "blockAncientDoorB");
@@ -83,6 +91,7 @@ public class BlockReg {
 		GameRegistry.registerBlock(blockASContainer, "blockAncientContainer");
 		GameRegistry.registerBlock(blockCatalyst, "blockCatalyst");
 		GameRegistry.registerBlock(blockBranch, "blockBranch");
+		GameRegistry.registerBlock(blockCrystalBlock, "blockCrystalBlock");
 		GameRegistry.registerBlock(NS, "NS");
 		GameRegistry.registerBlock(EW, "EW");
 		GameRegistry.registerBlock(NE, "NE");
@@ -90,7 +99,7 @@ public class BlockReg {
 		GameRegistry.registerBlock(SW, "SW");
 		GameRegistry.registerBlock(NW, "NW");
 
-		GameRegistry.registerBlock(OREe, "OREe");
+		GameRegistry.registerBlock(blockCrystalOre, "blockCrystalOre");
 
 		// TileEntities
 		GameRegistry.registerTileEntity(TileEntityAncientContainer.class,
@@ -99,6 +108,8 @@ public class BlockReg {
 		GameRegistry.registerTileEntity(TileEntityCasing.class, "TileEntityGoldCasing");
 		GameRegistry.registerTileEntity(TileEntityGoldCrop.class, "TileEntityGoldCrop");
 		GameRegistry.registerTileEntity(TileEntityIronCrop.class, "TileEntityIronCrop");
+		GameRegistry.registerTileEntity(TileEntityCrystalCrop.class, "TileEntityCrystalCrop");
+
 		GameRegistry.registerTileEntity(TileEntityBranch.class, "TileEntityBranch");
 		GameRegistry.registerTileEntity(TileEntityFlint.class, "TileEntityFlint01");
 

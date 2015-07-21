@@ -39,7 +39,7 @@ public class WorldGenOre implements IWorldGenerator {
 	private void genNether(Random random, World world, int x, int z) {}
 
 	private void genEnd(Random random, World world, int x, int z) {
-		addstone(BlockReg.OREe, world, random, x, z, 20, 30, 12, 0, 200);
+		addstone(BlockReg.blockCrystalOre, world, random, x, z, 20, 30, 12, 0, 200);
 	}
 
 	private void genOverworld(Random random, World world, int x, int z) {}
@@ -49,10 +49,10 @@ public class WorldGenOre implements IWorldGenerator {
 		WorldGenMinable minable = new WorldGenMinable(block, chanceToSpawn, Blocks.end_stone);
 		for (int i = 0; i < chanceToSpawn; i++) {
 
-			int X = PosX + random.nextInt(16);
-			int Z = PosZ + random.nextInt(16);
-			int Y = minY + random.nextInt(maxY - minY);
-			minable.generate(world, random, X, Y, Z);
+			int x = PosX + random.nextInt(16);
+			int z = PosZ + random.nextInt(16);
+			int y = minY + random.nextInt(maxY - minY);
+			minable.generate(world, random, x, y, z);
 		}
 	}
 

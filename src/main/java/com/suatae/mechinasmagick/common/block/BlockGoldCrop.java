@@ -30,7 +30,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class BlockGoldCrop extends CropBase implements ITileEntityProvider {
 
 	public BlockGoldCrop() {
-		super(Material.rock);
+		super(Material.rock, 10);
 		this.setBlockName(REF.NAME.BLOCK.GOLD);
 		this.setBlockTextureName(REF.NAME.BLOCK.GOLD00);
 		this.setLightLevel(1.0F);
@@ -106,13 +106,13 @@ public class BlockGoldCrop extends CropBase implements ITileEntityProvider {
 	@Override
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
-		if (metadata == 10) {
+		if (metadata == maxGrowthStage) {
 
 			drops.add(new ItemStack(this.SEED(), 1, 0));
 			drops.add(new ItemStack(this.FRUIT(), 2, 0));
 
 		}
-		if (metadata <= 9) {
+		if (metadata <= maxGrowthStage - 1) {
 
 			drops.add(new ItemStack(this.PRIMED_SEED(), 1, 0));
 

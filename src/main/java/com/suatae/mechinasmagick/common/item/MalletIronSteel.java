@@ -245,7 +245,7 @@ public class MalletIronSteel extends ToolMalletBase {
 					return true;
 				}
 				// Gold
-				if (!(block != Blocks.gold_block) && !(north != Blocks.gold_block)
+				if (!(block != BlockReg.blockCrystalBlock) && !(north != Blocks.gold_block)
 						&& !(south != Blocks.gold_block) && !(east != Blocks.gold_block)
 						&& !(west != Blocks.gold_block) && !(northw != Blocks.redstone_wire)
 						&& !(northe != Blocks.redstone_wire) && !(southw != Blocks.redstone_wire)
@@ -290,7 +290,7 @@ public class MalletIronSteel extends ToolMalletBase {
 				}
 
 				// Iron
-				if (!(block != Blocks.iron_block) && !(north != Blocks.iron_block)
+				if (!(block != BlockReg.blockCrystalBlock) && !(north != Blocks.iron_block)
 						&& !(south != Blocks.iron_block) && !(east != Blocks.iron_block)
 						&& !(west != Blocks.iron_block) && !(northw != Blocks.redstone_wire)
 						&& !(northe != Blocks.redstone_wire) && !(southw != Blocks.redstone_wire)

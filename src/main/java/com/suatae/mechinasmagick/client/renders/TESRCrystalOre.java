@@ -11,21 +11,21 @@ import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
-import com.suatae.mechinasmagick.client.models.OreE;
+import com.suatae.mechinasmagick.client.models.CrystalOre;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 
 
 
 
 
-public class TESROreE extends TileEntitySpecialRenderer {
+public class TESRCrystalOre extends TileEntitySpecialRenderer {
 	private static final ResourceLocation	texture	= new ResourceLocation(
 															REF.MOD_ID.toLowerCase(),
-															"textures/models/OreE.png");
-	private OreE							model;
+															"textures/models/blockCrystalOre.png");
+	private CrystalOre						model;
 
-	public TESROreE() {
-		this.model = new OreE();
+	public TESRCrystalOre() {
+		this.model = new CrystalOre();
 	}
 
 	@Override

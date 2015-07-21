@@ -108,37 +108,37 @@ public class BlockCache extends Block implements ITileEntityProvider {
 
 		if (metadata == 0) {
 			// LVL 01
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D07, world.rand.nextInt(3) + 2, 2));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D08, world.rand.nextInt(2) + 2, 4));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d07, world.rand.nextInt(3) + 2, 2));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d08, world.rand.nextInt(2) + 2, 4));
 			if (world.rand.nextFloat() < 0.50F)
-				drops.add(new ItemStack(REF.CACHEDROP.LVL01.D01));
+				drops.add(new ItemStack(REF.CACHEDROP.LVL01.d01));
 			if (world.rand.nextFloat() < 0.50F)
-				drops.add(new ItemStack(REF.CACHEDROP.LVL01.D02));
+				drops.add(new ItemStack(REF.CACHEDROP.LVL01.d02));
 			if (world.rand.nextFloat() < 0.75F)
-				drops.add(new ItemStack(REF.CACHEDROP.LVL01.D03));
+				drops.add(new ItemStack(REF.CACHEDROP.LVL01.d03));
 			if (world.rand.nextFloat() < 0.50F)
-				drops.add(new ItemStack(REF.CACHEDROP.LVL01.D04));
+				drops.add(new ItemStack(REF.CACHEDROP.LVL01.d04));
 			if (world.rand.nextFloat() < 0.25F)
-				drops.add(new ItemStack(REF.CACHEDROP.LVL01.D05));
+				drops.add(new ItemStack(REF.CACHEDROP.LVL01.d05));
 			if (world.rand.nextFloat() < 0.25F)
-				drops.add(new ItemStack(REF.CACHEDROP.LVL01.D06));
+				drops.add(new ItemStack(REF.CACHEDROP.LVL01.d06));
 			if (world.rand.nextFloat() < 0.75F)
-				drops.add(new ItemStack(REF.CACHEDROP.LVL01.D09));
+				drops.add(new ItemStack(REF.CACHEDROP.LVL01.d09));
 			if (world.rand.nextFloat() < 0.50F)
-				drops.add(new ItemStack(REF.CACHEDROP.LVL01.D10));
+				drops.add(new ItemStack(REF.CACHEDROP.LVL01.d10));
 		}
 		if (metadata == 1) {
 			// LVL 01
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D01, world.rand.nextInt(5) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D02, world.rand.nextInt(3) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D03, world.rand.nextInt(8) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D04, world.rand.nextInt(1) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D05, world.rand.nextInt(3) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D06, world.rand.nextInt(5) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D07, world.rand.nextInt(3) + 2, 2));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D08, world.rand.nextInt(2) + 2, 4));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D09, world.rand.nextInt(10) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D10, world.rand.nextInt(10) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d01, world.rand.nextInt(5) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d02, world.rand.nextInt(3) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d03, world.rand.nextInt(8) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d04, world.rand.nextInt(1) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d05, world.rand.nextInt(3) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d06, world.rand.nextInt(5) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d07, world.rand.nextInt(3) + 2, 2));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d08, world.rand.nextInt(2) + 2, 4));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d09, world.rand.nextInt(10) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d10, world.rand.nextInt(10) + 0));
 			// LVL 02
 			if (world.rand.nextFloat() < 0.25F)
 				drops.add(new ItemStack(REF.CACHEDROP.LVL02.D01));
@@ -157,16 +157,16 @@ public class BlockCache extends Block implements ITileEntityProvider {
 		}
 		if (metadata == 2) {
 			// LVL 01
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D01, world.rand.nextInt(6) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D02, world.rand.nextInt(4) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D03, world.rand.nextInt(8) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D04, world.rand.nextInt(2) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D05, world.rand.nextInt(4) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D06, world.rand.nextInt(6) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D07, world.rand.nextInt(5) + 2, 2));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D08, world.rand.nextInt(4) + 2, 4));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D09, world.rand.nextInt(8) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D10, world.rand.nextInt(8) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d01, world.rand.nextInt(6) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d02, world.rand.nextInt(4) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d03, world.rand.nextInt(8) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d04, world.rand.nextInt(2) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d05, world.rand.nextInt(4) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d06, world.rand.nextInt(6) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d07, world.rand.nextInt(5) + 2, 2));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d08, world.rand.nextInt(4) + 2, 4));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d09, world.rand.nextInt(8) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d10, world.rand.nextInt(8) + 0));
 			// LVL 02
 			drops.add(new ItemStack(REF.CACHEDROP.LVL02.D02, world.rand.nextInt(2) + 0));
 			drops.add(new ItemStack(REF.CACHEDROP.LVL02.D03, world.rand.nextInt(3) + 0));
@@ -190,16 +190,16 @@ public class BlockCache extends Block implements ITileEntityProvider {
 		}
 		if (metadata == 3) {
 			// LVL 01
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D01, world.rand.nextInt(7) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D02, world.rand.nextInt(5) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D03, world.rand.nextInt(7) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D04, world.rand.nextInt(3) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D05, world.rand.nextInt(5) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D06, world.rand.nextInt(7) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D07, world.rand.nextInt(8) + 2, 2));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D08, world.rand.nextInt(6) + 2, 4));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D09, world.rand.nextInt(7) + 0));
-			drops.add(new ItemStack(REF.CACHEDROP.LVL01.D10, world.rand.nextInt(7) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d01, world.rand.nextInt(7) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d02, world.rand.nextInt(5) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d03, world.rand.nextInt(7) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d04, world.rand.nextInt(3) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d05, world.rand.nextInt(5) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d06, world.rand.nextInt(7) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d07, world.rand.nextInt(8) + 2, 2));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d08, world.rand.nextInt(6) + 2, 4));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d09, world.rand.nextInt(7) + 0));
+			drops.add(new ItemStack(REF.CACHEDROP.LVL01.d10, world.rand.nextInt(7) + 0));
 			// LVL 02
 			drops.add(new ItemStack(REF.CACHEDROP.LVL02.D02, world.rand.nextInt(6) + 0));
 			drops.add(new ItemStack(REF.CACHEDROP.LVL02.D03, world.rand.nextInt(3) + 0));

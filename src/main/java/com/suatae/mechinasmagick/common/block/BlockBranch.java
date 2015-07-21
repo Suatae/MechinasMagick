@@ -11,7 +11,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -62,14 +62,14 @@ public class BlockBranch extends BlockBase implements ITileEntityProvider {
 
 	@Override
 	public void onEntityWalking(World world, int x, int y, int z, Entity entity) {
-		if (entity instanceof EntityLivingBase && !world.isRemote) {
+		if (entity instanceof EntityPlayer && !world.isRemote) {
 			world.func_147480_a(x, y, z, true);
 		}
 	}
 
 	@Override
 	public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
-		if (entity instanceof EntityLivingBase && !world.isRemote) {
+		if (entity instanceof EntityPlayer && !world.isRemote) {
 			world.func_147480_a(x, y, z, true);
 		}
 	}
