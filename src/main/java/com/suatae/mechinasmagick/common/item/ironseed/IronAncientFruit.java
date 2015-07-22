@@ -19,8 +19,8 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class IronAncientFruit extends FruitBase {
 
 	public IronAncientFruit() {
-		super(20, 2.5F, 18, 900, 5, 100, 10, 1200, 4, 100, 14, 1200, 5, 100, 1, 1200, 2, 100, 8,
-				1200, 1, 100);
+		super(20, 5.5F, 17, 1000, 10, 100, 21, 1200, 14, 100, 12, 1200, 6, 100, 11, 1200, 2, 100,
+				5, 1200, 4, 100);
 		this.setAlwaysEdible();
 		this.setUnlocalizedName(REF.NAME.ITEM.FRUITI);
 		maxStackSize = 8;
@@ -28,11 +28,11 @@ public class IronAncientFruit extends FruitBase {
 
 	@Override
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
-		list.add(EnumChatFormatting.BLUE + "-Speed III");
-		list.add(EnumChatFormatting.BLUE + "-Weakness");
-		list.add(EnumChatFormatting.BLUE + "-Jump Boost II");
-		list.add(EnumChatFormatting.BLUE + "-Regeneration");
-		list.add(EnumChatFormatting.BLUE + "-Invisibility");
+		list.add(EnumChatFormatting.BLUE + "-Hunger");
+		list.add(EnumChatFormatting.BLUE + "-Health Boost");
+		list.add(EnumChatFormatting.BLUE + "-Strength");
+		list.add(EnumChatFormatting.BLUE + "-Resistance III");
+		list.add(EnumChatFormatting.BLUE + "-Fire Resistance");
 	}
 
 	@Override

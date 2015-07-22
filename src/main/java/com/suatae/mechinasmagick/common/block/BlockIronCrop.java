@@ -8,7 +8,7 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
@@ -46,7 +46,7 @@ public class BlockIronCrop extends CropBase implements ITileEntityProvider {
 
 	@Override
 	protected boolean canPlaceBlockOn(Block Block) {
-		return Block == REF.BLOCK.SEED.SOIL;
+		return Block == Blocks.air;
 	}
 
 	@Override
@@ -80,11 +80,11 @@ public class BlockIronCrop extends CropBase implements ITileEntityProvider {
 		 * 
 		 * }
 		 */
-		if (getPlantMetadata(world, X, Y, Z) == 10) {
+		if (getPlantMetadata(world, X, Y, Z) == maxGrowthStage) {
 			world.spawnParticle("mobSpell", d0, d1, d2, d3, d4, d5);
 		}
 
-		if (getPlantMetadata(world, X, Y, Z) >= 6) {
+		if (getPlantMetadata(world, X, Y, Z) >= maxGrowthStage - 4) {
 			world.spawnParticle("townaura", d6, d7, d8, d3, d4, d5);
 			world.spawnParticle("townaura", d6, d9, d8, d3, d4, d5);
 			world.spawnParticle("townaura", d6m, d7, d8m, d3, d4, d5);
@@ -105,31 +105,19 @@ public class BlockIronCrop extends CropBase implements ITileEntityProvider {
 	@Override
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
-		if (metadata == 9) {
+		if (metadata == maxGrowthStage) {
 
-			drops.add(new ItemStack(this.SEED(), 1, 0));
-			drops.add(new ItemStack(this.FRUIT(), 2, 0));
+			drops.add(new ItemStack(ItemReg.itemSeed, 1, 0));
+			drops.add(new ItemStack(ItemReg.itemAncientFruitIron, 2, 0));
 
 		}
-		if (metadata <= 8) {
+		if (metadata <= maxGrowthStage - 1) {
 
-			drops.add(new ItemStack(this.PRIMED_SEED(), 1, 0));
+			drops.add(new ItemStack(ItemReg.itemPrimedIron, 1, 0));
 
 		}
 
 		return drops;
-	}
-
-	protected Item SEED() {
-		return ItemReg.itemSeed;
-	}
-
-	protected Item PRIMED_SEED() {
-		return ItemReg.itemPrimedIron;
-	}
-
-	protected Item FRUIT() {
-		return ItemReg.itemAncientFruitIron;
 	}
 
 	@Override
@@ -138,15 +126,15 @@ public class BlockIronCrop extends CropBase implements ITileEntityProvider {
 		iIcon = new IIcon[maxGrowthStage + 1];
 		iIcon[0] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
 		iIcon[1] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
-		iIcon[2] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON01);
-		iIcon[3] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON01);
-		iIcon[4] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON02);
-		iIcon[5] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON02);
-		iIcon[6] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON03);
-		iIcon[7] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON03);
-		iIcon[8] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON04);
-		iIcon[9] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON04);
-		iIcon[10] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON04);
+		iIcon[2] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[3] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[4] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[5] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[6] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[7] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[8] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[9] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
+		iIcon[10] = parIIconRegister.registerIcon(REF.NAME.BLOCK.IRON00);
 	}
 
 	@Override

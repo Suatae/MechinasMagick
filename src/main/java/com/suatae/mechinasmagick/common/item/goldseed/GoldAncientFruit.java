@@ -19,7 +19,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class GoldAncientFruit extends FruitBase {
 
 	public GoldAncientFruit() {
-		super(20, 2.5F, 18, 900, 5, 100, 10, 1200, 4, 100, 14, 1200, 5, 100, 1, 1200, 2, 100, 8,
+		super(0, 0.0F, 18, 1000, 5, 100, 16, 1200, 4, 100, 3, 1200, 5, 100, 1, 1200, 2, 100, 8,
 				1200, 1, 100);
 		this.setAlwaysEdible();
 		this.setUnlocalizedName(REF.NAME.ITEM.FRUITG);
@@ -30,9 +30,9 @@ public class GoldAncientFruit extends FruitBase {
 	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
 		list.add(EnumChatFormatting.BLUE + "-Speed III");
 		list.add(EnumChatFormatting.BLUE + "-Weakness");
+		list.add(EnumChatFormatting.BLUE + "-Haste");
 		list.add(EnumChatFormatting.BLUE + "-Jump Boost II");
-		list.add(EnumChatFormatting.BLUE + "-Regeneration");
-		list.add(EnumChatFormatting.BLUE + "-Invisibility");
+		list.add(EnumChatFormatting.BLUE + "-Night Vision");
 	}
 
 	@Override

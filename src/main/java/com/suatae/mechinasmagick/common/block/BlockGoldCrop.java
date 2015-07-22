@@ -8,7 +8,6 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.IIcon;
@@ -81,11 +80,11 @@ public class BlockGoldCrop extends CropBase implements ITileEntityProvider {
 		 * 
 		 * }
 		 */
-		if (getPlantMetadata(world, X, Y, Z) == 10) {
+		if (getPlantMetadata(world, X, Y, Z) == maxGrowthStage) {
 			world.spawnParticle("mobSpell", d0, d1, d2, d3, d4, d5);
 		}
 
-		if (getPlantMetadata(world, X, Y, Z) >= 6) {
+		if (getPlantMetadata(world, X, Y, Z) >= maxGrowthStage - 4) {
 			world.spawnParticle("townaura", d6, d7, d8, d3, d4, d5);
 			world.spawnParticle("townaura", d6, d9, d8, d3, d4, d5);
 			world.spawnParticle("townaura", d6m, d7, d8m, d3, d4, d5);
@@ -108,29 +107,17 @@ public class BlockGoldCrop extends CropBase implements ITileEntityProvider {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 		if (metadata == maxGrowthStage) {
 
-			drops.add(new ItemStack(this.SEED(), 1, 0));
-			drops.add(new ItemStack(this.FRUIT(), 2, 0));
+			drops.add(new ItemStack(ItemReg.itemSeed, 1, 0));
+			drops.add(new ItemStack(ItemReg.itemAncientFruitGold, 2, 0));
 
 		}
 		if (metadata <= maxGrowthStage - 1) {
 
-			drops.add(new ItemStack(this.PRIMED_SEED(), 1, 0));
+			drops.add(new ItemStack(ItemReg.itemPrimedGold, 1, 0));
 
 		}
 
 		return drops;
-	}
-
-	protected Item SEED() {
-		return ItemReg.itemSeed;
-	}
-
-	protected Item PRIMED_SEED() {
-		return ItemReg.itemPrimedGold;
-	}
-
-	protected Item FRUIT() {
-		return ItemReg.itemAncientFruitGold;
 	}
 
 	@Override

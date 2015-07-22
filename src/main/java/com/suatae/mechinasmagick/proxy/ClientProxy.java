@@ -11,10 +11,12 @@ import com.suatae.mechinasmagick.client.renders.TESRBranch;
 import com.suatae.mechinasmagick.client.renders.TESRCasing;
 import com.suatae.mechinasmagick.client.renders.TESRCatalyst;
 import com.suatae.mechinasmagick.client.renders.TESRCrystalCrop;
+import com.suatae.mechinasmagick.client.renders.TESRCrystalOre;
 import com.suatae.mechinasmagick.client.renders.TESRGoldCrop;
 import com.suatae.mechinasmagick.client.renders.TESRIronCrop;
-import com.suatae.mechinasmagick.client.renders.TESRCrystalOre;
 import com.suatae.mechinasmagick.client.renders.flint.TESRBlockFlint;
+import com.suatae.mechinasmagick.client.renders.ir.IRFruitGold;
+import com.suatae.mechinasmagick.client.renders.ir.IRFruitIron;
 import com.suatae.mechinasmagick.client.renders.ir.IRSeed;
 import com.suatae.mechinasmagick.client.renders.ir.IRToolIronSteelMallet;
 import com.suatae.mechinasmagick.client.renders.ir.IRToolStoneMallet;
@@ -85,6 +87,8 @@ public class ClientProxy extends CommonProxy {
 		MinecraftForgeClient.registerItemRenderer(ItemReg.ironsteelMallet,
 				new IRToolIronSteelMallet());
 		MinecraftForgeClient.registerItemRenderer(ItemReg.itemSeed, new IRSeed());
+		MinecraftForgeClient.registerItemRenderer(ItemReg.itemAncientFruitGold, new IRFruitGold());
+		MinecraftForgeClient.registerItemRenderer(ItemReg.itemAncientFruitIron, new IRFruitIron());
 
 		// Cache
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCache),
@@ -117,8 +121,8 @@ public class ClientProxy extends CommonProxy {
 				new IRCatalyst(c, new TileEntityCatalyst()));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockBranch),
 				new IRBranch(b, new TileEntityBranch()));
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCrystalOre), new IROreE(
-				o, new TileEntityOreE()));
+		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCrystalOre),
+				new IROreE(o, new TileEntityOreE()));
 
 	}
 }

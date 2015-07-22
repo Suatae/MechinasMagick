@@ -3,13 +3,13 @@
   "modid": "MechinasMagick",
   "name": "Mechinas Magick",
   "description": "The primary mod designed for the Mechinas Magick modpack.",
-  "version": "1.7.10-1.23",
+  "version": "1.7.10-1.24",
   "mcversion": "${mcversion}",
   "url": "https://github.com/Suatae/MechinasMagick",
   "updateUrl": "",
-  "authorList": ["Suatae"],
+  "authorList": ["Suatae", "Omegami"],
   "credits": "",
-  "logoFile": "",
+  "logoFile": "/assets/mechinasmagick/textures/gui/title/logo.png",
   "screenshots": [],
   "dependencies": []
 }

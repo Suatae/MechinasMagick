@@ -27,7 +27,7 @@ import com.suatae.mechinasmagick.common.core.lib.REF;
 public class TESRIronCrop extends TileEntitySpecialRenderer {
 	private static final ResourceLocation	texture	= new ResourceLocation(
 															REF.MOD_ID.toLowerCase(),
-															"textures/models/crop.png");
+															"textures/models/CropIron.png");
 
 	private Crop00							model00;
 	private Crop01							model01;

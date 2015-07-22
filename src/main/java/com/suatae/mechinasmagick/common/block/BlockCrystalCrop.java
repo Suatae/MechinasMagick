@@ -45,28 +45,6 @@ public class BlockCrystalCrop extends CropBase implements ITileEntityProvider {
 		return new TileEntityCrystalCrop();
 	}
 
-	// public boolean canPlaceBlockAt(World world, int x, int y, int z) {
-	// return super.canPlaceBlockAt(world, x, y, z) && world.isSideSolid(x - 1,
-	// y, z, EAST, true)
-	// || world.isSideSolid(x + 1, y, z, WEST, true)
-	// || world.isSideSolid(x, y, z - 1, SOUTH, true)
-	// || world.isSideSolid(x, y, z + 1, NORTH, true) || func_150107_m(world, x,
-	// y - 1, z);
-	// }
-	//
-	// public boolean canBlockStay(World world, int x, int y, int z) {
-	// if (y >= 0 && y < 256) {
-	// Block block = world.getBlock(x, y - 1, z);
-	// return block == Blocks.dirt && world.getBlockMetadata(x, y - 1, z) == 2
-	// || world.getFullBlockLightValue(x, y, z) < 5
-	// && block.canSustainPlant(world, x, y - 1, z, ForgeDirection.UP, this)
-	// && world.isAirBlock(x, y + 1, z);
-	// }
-	// else {
-	// return false;
-	// }
-	// }
-
 	public void onNeighborBlockChange(World world, int x, int y, int z, Block block) {
 		super.onNeighborBlockChange(world, x, y, z, block);
 		this.canBlockStay(world, x, y, z);
@@ -77,8 +55,6 @@ public class BlockCrystalCrop extends CropBase implements ITileEntityProvider {
 			return true;
 		}
 		else {
-			// Block block = world.getBlock(x, y, z);
-			// return block.canPlaceTorchOnTop(world, x, y, z);
 			return false;
 		}
 	}

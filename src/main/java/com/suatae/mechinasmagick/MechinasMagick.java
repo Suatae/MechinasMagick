@@ -10,6 +10,7 @@ import com.suatae.mechinasmagick.utility.ConfigUtil;
 import com.suatae.mechinasmagick.utility.LogHelper;
 import com.suatae.mechinasmagick.utility.RecipeRemover;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
@@ -42,6 +43,8 @@ public class MechinasMagick {
 		proxy.registerTESRGoldCasing();
 		proxy.registerTESRIronCasing();
 		proxy.registerItemRender();
+		ConfigUtil.init(event.getSuggestedConfigurationFile());
+		FMLCommonHandler.instance().bus().register(new ConfigUtil());
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("[Pre-Initialization]: --- Loaded ---");
