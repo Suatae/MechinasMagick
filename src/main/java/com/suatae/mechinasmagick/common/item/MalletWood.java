@@ -3,8 +3,10 @@ package com.suatae.mechinasmagick.common.item;
 import java.util.List;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
@@ -14,11 +16,15 @@ import com.suatae.mechinasmagick.common.init.BlockReg;
 import com.suatae.mechinasmagick.common.init.ItemReg;
 import com.suatae.mechinasmagick.common.init.ToolMalletBase;
 
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
+
 
 
 
 
 public class MalletWood extends ToolMalletBase {
+
 	public MalletWood() {
 		super(ItemReg.MMWood);
 		this.setUnlocalizedName(REF.NAME.ITEM.WMALLET);
@@ -31,9 +37,13 @@ public class MalletWood extends ToolMalletBase {
 
 	}
 
+	@SideOnly(Side.CLIENT)
 	@Override
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer Player, World world, int X, int Y,
 			int Z, int par7, float par8, float par9, float par10) {
+
+		ItemStack stick = new ItemStack(Items.stick, 1 + world.rand.nextInt(5));
+
 		if (Player.canPlayerEdit(X, Y, Z, par7, itemstack)) {
 
 			// Main Center
@@ -108,6 +118,17 @@ public class MalletWood extends ToolMalletBase {
 				if (itemstack.getItemDamage() <= ToolMalletBase.Wooddurability) {
 					world.playSoundEffect(X, Y, Z, REF.SOUND.MALLETHIT, 0.5F, 1.0F);
 				}
+				return true;
+			}
+			// Log
+			if (block == Blocks.log || block == Blocks.log2) {
+
+				if (!world.isRemote) {
+					world.func_147480_a(X, Y, Z, false);
+					world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+				}
+
+				itemstack.attemptDamageItem(par7, null);
 				return true;
 			}
 			// Gold

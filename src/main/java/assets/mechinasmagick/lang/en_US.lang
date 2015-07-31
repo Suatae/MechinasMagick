@@ -43,4 +43,92 @@ tile.mechinasmagick:blockCache_2.name=Rare Cache
 tile.mechinasmagick:blockCache_3.name=Elite Cache
 tile.mechinasmagick:blockCrystalOre.name=Dark Crystal Ore
 tile.mechinasmagick:blockCrystalBlock.name=Dark Crystal Block
-itemGroup.MechinasMagick=Mechinas Magick
+tile.mechinasmagick:blockVoid.name=Void
+
+tile.mechinasmagick:blockCoreWood.name=Wood Machine Core
+
+tile.mechinasmagick:blockCoreAlum.name=Aluminum Machine Core
+tile.mechinasmagick:blockCoreCopp.name=Copper Machine Core
+tile.mechinasmagick:blockCoreIg.name=Ignatious Machine Core
+tile.mechinasmagick:blockCoreLap.name=Lapis Machine Core
+tile.mechinasmagick:blockCoreLem.name=Lemurite Machine Core
+tile.mechinasmagick:blockCoreZinc.name=Zinc Machine Core
+
+tile.mechinasmagick:blockCoreAlumB.name=Aluminum Brass Machine Core
+tile.mechinasmagick:blockCoreBrass.name=Brass Machine Core
+tile.mechinasmagick:blockCoreLum.name=Lumium Machine Core
+tile.mechinasmagick:blockCoreSig.name=Signalum Machine Core
+tile.mechinasmagick:blockCoreSil.name=Silver Machine Core
+tile.mechinasmagick:blockCoreTin.name=Tin Machine Core
+
+tile.mechinasmagick:blockCoreBron.name=Bronze Machine Core
+tile.mechinasmagick:blockCoreCon.name=Constantan Machine Core
+tile.mechinasmagick:blockCoreDesh.name=Desh Machine Core
+tile.mechinasmagick:blockCoreElec.name=Electrum Machine Core
+tile.mechinasmagick:blockCoreHep.name=Hepatizon Machine Core
+tile.mechinasmagick:blockCoreLead.name=Lead Machine Core
+tile.mechinasmagick:blockCoreNaq.name=Naquadah Machine Core
+tile.mechinasmagick:blockCoreNic.name=Nickel Machine Core
+tile.mechinasmagick:blockCoreOsm.name=Osmium Machine Core
+
+tile.mechinasmagick:blockCoreDIron.name=Deep Iron Machine Core
+tile.mechinasmagick:blockCoreInv.name=Invar Machine Core
+tile.mechinasmagick:blockCoreIron.name=Iron Machine Core
+tile.mechinasmagick:blockCoreMan.name=Manganese Machine Core
+tile.mechinasmagick:blockCoreSIron.name=Shadow Iron Machine Core
+
+tile.mechinasmagick:blockCoreAng.name=Angmallen Machine Core
+tile.mechinasmagick:blockCoreGold.name=Gold Machine Core
+tile.mechinasmagick:blockCoreMid.name=Midasium Machine Core
+
+tile.mechinasmagick:blockCoreDSteel.name=Damascus Steel Machine Core
+tile.mechinasmagick:blockCoreDia.name=Diamond Machine Core
+tile.mechinasmagick:blockCoreSSteel.name=Shadow Steel Machine Core
+tile.mechinasmagick:blockCoreSteel.name=Steel Machine Core
+
+tile.mechinasmagick:blockCoreInf.name=Infuscolium Machine Core
+tile.mechinasmagick:blockCorePro.name=Prometheum Machine Core
+
+tile.mechinasmagick:blockCoreBSteel.name=Black Steel Machine Core
+
+tile.mechinasmagick:blockCoreAld.name=Alduorite Machine Core
+tile.mechinasmagick:blockCoreCeru.name=Ceruclase Machine Core
+tile.mechinasmagick:blockCorePlat.name=Platinum Machine Core
+tile.mechinasmagick:blockCoreVyr.name=Vyroxeres Machine Core
+
+tile.mechinasmagick:blockCoreIno.name=Inolashite Machine Core
+
+tile.mechinasmagick:blockCoreASil.name=Astral Silver Machine Core
+tile.mechinasmagick:blockCoreOur.name=Oureclase Machine Core
+
+tile.mechinasmagick:blockCoreExi.name=Eximite Machine Core
+tile.mechinasmagick:blockCoreKal.name=Kalendrite Machine Core
+tile.mechinasmagick:blockCoreMeu.name=Meutoite Machine Core
+tile.mechinasmagick:blockCoreMith.name=Mithril Machine Core
+
+tile.mechinasmagick:blockCoreAmo.name=Amordrine Machine Core
+tile.mechinasmagick:blockCoreQSil.name=Quicksilver Machine Core
+
+tile.mechinasmagick:blockCoreCarm.name=Carmot Machine Core
+tile.mechinasmagick:blockCoreRub.name=Rubracium Machine Core
+
+tile.mechinasmagick:blockCoreDesi.name=Desichalkos Machine Core
+tile.mechinasmagick:blockCoreHad.name=Haderoth Machine Core
+
+tile.mechinasmagick:blockCoreOric.name=Orichalcum Machine Core
+tile.mechinasmagick:blockCoreVul.name=Vulcanite Machine Core
+
+tile.mechinasmagick:blockCoreCel.name=Celengil Machine Core
+
+tile.mechinasmagick:blockCoreAdam.name=Adamantine Machine Core
+tile.mechinasmagick:blockCoreSang.name=Sanguinite Machine Core
+
+tile.mechinasmagick:blockCoreAtl.name=Atlarus Machine Core
+
+tile.mechinasmagick:blockCoreTart.name=Tartarite Machine Core
+
+
+
+
+itemGroup.MechinasMagick=Mechinas Magick Main
+itemGroup.MechinasMagickCore=Mechinas Magick Machine Cores

@@ -33,6 +33,7 @@ public class BlockCrystalCrop extends CropBase implements ITileEntityProvider {
 		this.setBlockName(REF.NAME.BLOCK.CRYSTAL);
 		this.setBlockTextureName(REF.NAME.BLOCK.CRYSTAL00);
 		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setStepSound(Block.soundTypeGlass);
 		this.setLightLevel(0.5F);
 		this.setHardness(1.5F);
 		this.setResistance(10.0F);

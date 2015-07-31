@@ -14,7 +14,7 @@ import com.suatae.mechinasmagick.common.init.BlockReg;
 public class REF {
 	public static final String	MOD_ID				= "MechinasMagick";
 	public static final String	MOD_NAME			= "Mechinas Magick";
-	public static final String	VERSION				= "1.7.10-1.24";
+	public static final String	VERSION				= "1.7.10-1.25";
 	public static final String	CLIENTSIDE			= "com.suatae.mechinasmagick.proxy.ClientProxy";
 	public static final String	COMMONSIDE			= "com.suatae.mechinasmagick.proxy.CommonProxy";
 	public static final String	GUI_FACTORY_CLASS	= "com.suatae.mechinasmagick.client.gui.MMGuiFactory";
@@ -187,7 +187,90 @@ public class REF {
 			// Misc
 			public final static String	BRANCH			= "blockBranch";
 			public final static String	crystalORE		= "blockCrystalOre";
+			public final static String	VOID			= "blockVoid";
 
+			// Core 00
+			public final static String	cWood			= "blockCoreWood";
+			// Core 01
+			public final static String	cAlum			= "blockCoreAlum";
+			public final static String	cCopp			= "blockCoreCopp";
+			public final static String	cIg				= "blockCoreIg";
+			public final static String	cLap			= "blockCoreLap";
+			public final static String	cLem			= "blockCoreLem";
+			public final static String	cZinc			= "blockCoreZinc";
+			// Core 02
+			public final static String	cAlumB			= "blockCoreAlumB";
+			public final static String	cBrass			= "blockCoreBrass";
+			public final static String	cLum			= "blockCoreLum";
+			public final static String	cSig			= "blockCoreSig";
+			public final static String	cSil			= "blockCoreSil";
+			public final static String	cTin			= "blockCoreTin";
+			// Core 03
+			public final static String	cBron			= "blockCoreBron";
+			public final static String	cCon			= "blockCoreCon";
+			public final static String	cDesh			= "blockCoreDesh";
+			public final static String	cElec			= "blockCoreElec";
+			public final static String	cHep			= "blockCoreHep";
+			public final static String	cLead			= "blockCoreLead";
+			public final static String	cNaq			= "blockCoreNaq";
+			public final static String	cNic			= "blockCoreNic";
+			public final static String	cOsm			= "blockCoreOsm";
+			// Core 04
+			public final static String	cDiron			= "blockCoreDIron";
+			public final static String	cInv			= "blockCoreInv";
+			public final static String	cIron			= "blockCoreIron";
+			public final static String	cMan			= "blockCoreMan";
+			public final static String	cSiron			= "blockCoreSIron";
+			// Core 05
+			public final static String	cAng			= "blockCoreAng";
+			public final static String	cGold			= "blockCoreGold";
+			public final static String	cMid			= "blockCoreMid";
+			// Core 06
+			public final static String	cDSteel			= "blockCoreDSteel";
+			public final static String	cDia			= "blockCoreDia";
+			public final static String	cSSteel			= "blockCoreSSteel";
+			public final static String	cSteel			= "blockCoreSteel";
+			// Core 07
+			public final static String	cInf			= "blockCoreInf";
+			public final static String	cPro			= "blockCorePro";
+			// Core 08
+			public final static String	cBSteel			= "blockCoreBSteel";
+			// Core 09
+			public final static String	cAld			= "blockCoreAld";
+			public final static String	cCeru			= "blockCoreCeru";
+			public final static String	cPlat			= "blockCorePlat";
+			public final static String	cVyr			= "blockCoreVyr";
+			// Core 10
+			public final static String	cIno			= "blockCoreIno";
+			// Core 11
+			public final static String	cASil			= "blockCoreASil";
+			public final static String	cOur			= "blockCoreOur";
+			// Core 12
+			public final static String	cExi			= "blockCoreExi";
+			public final static String	cKal			= "blockCoreKal";
+			public final static String	cMeu			= "blockCoreMeu";
+			public final static String	cMith			= "blockCoreMith";
+			// Core 13
+			public final static String	cAmo			= "blockCoreAmo";
+			public final static String	cQSil			= "blockCoreQSil";
+			// Core 14
+			public final static String	cCarm			= "blockCoreCarm";
+			public final static String	cRub			= "blockCoreRub";
+			// Core 15
+			public final static String	cDesi			= "blockCoreDesi";
+			public final static String	cHad			= "blockCoreHad";
+			// Core 16
+			public final static String	cOric			= "blockCoreOric";
+			public final static String	cVul			= "blockCoreVul";
+			// Core 17
+			public final static String	cCel			= "blockCoreCel";
+			// Core 18
+			public final static String	cAdam			= "blockCoreAdam";
+			public final static String	cSang			= "blockCoreSang";
+			// Core 19
+			public final static String	cAtl			= "blockCoreAtl";
+			// Core 20
+			public final static String	cTart			= "blockCoreTart";
 		}
 
 	}

@@ -3,8 +3,10 @@ package com.suatae.mechinasmagick.common.item;
 import java.util.List;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
@@ -34,6 +36,9 @@ public class MalletStone extends ToolMalletBase {
 	@Override
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer Player, World world, int X, int Y,
 			int Z, int par7, float par8, float par9, float par10) {
+
+		ItemStack stick = new ItemStack(Items.stick, world.rand.nextInt(2) + world.rand.nextInt(5));
+
 		if (Player.canPlayerEdit(X, Y, Z, par7, itemstack)) {
 
 			// Main Center
@@ -113,35 +118,35 @@ public class MalletStone extends ToolMalletBase {
 				Block f = world.getBlock(X - 1, Y, Z - 1);
 				Block g = world.getBlock(X + 1, Y, Z - 1);
 				Block h = world.getBlock(X - 1, Y, Z + 1);
-				if (a == BlockReg.blockLavaStone) {
+				if (a == REF.BLOCK.lavaS) {
 					world.func_147480_a(X + 1, Y, Z, false);
 					world.setBlock(X + 1, Y, Z, REF.BLOCK.lava);
 				}
-				if (b == BlockReg.blockLavaStone) {
+				if (b == REF.BLOCK.lavaS) {
 					world.func_147480_a(X - 1, Y, Z, false);
 					world.setBlock(X - 1, Y, Z, REF.BLOCK.lava);
 				}
-				if (c == BlockReg.blockLavaStone) {
+				if (c == REF.BLOCK.lavaS) {
 					world.func_147480_a(X, Y, Z + 1, false);
 					world.setBlock(X, Y, Z + 1, REF.BLOCK.lava);
 				}
-				if (d == BlockReg.blockLavaStone) {
+				if (d == REF.BLOCK.lavaS) {
 					world.func_147480_a(X, Y, Z - 1, false);
 					world.setBlock(X, Y, Z - 1, REF.BLOCK.lava);
 				}
-				if (e == BlockReg.blockLavaStone) {
+				if (e == REF.BLOCK.lavaS) {
 					world.func_147480_a(X + 1, Y, Z + 1, false);
 					world.setBlock(X + 1, Y, Z + 1, REF.BLOCK.lava);
 				}
-				if (f == BlockReg.blockLavaStone) {
+				if (f == REF.BLOCK.lavaS) {
 					world.func_147480_a(X - 1, Y, Z - 1, false);
 					world.setBlock(X - 1, Y, Z - 1, REF.BLOCK.lava);
 				}
-				if (g == BlockReg.blockLavaStone) {
+				if (g == REF.BLOCK.lavaS) {
 					world.func_147480_a(X + 1, Y, Z - 1, false);
 					world.setBlock(X + 1, Y, Z - 1, REF.BLOCK.lava);
 				}
-				if (h == BlockReg.blockLavaStone) {
+				if (h == REF.BLOCK.lavaS) {
 					world.func_147480_a(X - 1, Y, Z + 1, false);
 					world.setBlock(X - 1, Y, Z + 1, REF.BLOCK.lava);
 				}
@@ -149,6 +154,204 @@ public class MalletStone extends ToolMalletBase {
 				if (itemstack.getItemDamage() <= ToolMalletBase.Stonedurability) {
 					world.playSoundEffect(X, Y, Z, REF.SOUND.MALLETHIT, 0.5F, 1.0F);
 				}
+				itemstack.attemptDamageItem(par7, null);
+				return true;
+			}
+			// Log
+			if (block == Blocks.log || block == Blocks.log2) {
+				if (!world.isRemote) {
+					world.func_147480_a(X, Y, Z, false);
+					world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+				}
+				Block a = world.getBlock(X + 1, Y, Z);
+				Block b = world.getBlock(X - 1, Y, Z);
+				Block c = world.getBlock(X, Y, Z + 1);
+				Block d = world.getBlock(X, Y, Z - 1);
+				Block e = world.getBlock(X + 1, Y, Z + 1);
+				Block f = world.getBlock(X - 1, Y, Z - 1);
+				Block g = world.getBlock(X + 1, Y, Z - 1);
+				Block h = world.getBlock(X - 1, Y, Z + 1);
+
+				Block blockp1 = world.getBlock(X, Y + 1, Z);
+				Block ap1 = world.getBlock(X + 1, Y + 1, Z);
+				Block bp1 = world.getBlock(X - 1, Y + 1, Z);
+				Block cp1 = world.getBlock(X, Y + 1, Z + 1);
+				Block dp1 = world.getBlock(X, Y + 1, Z - 1);
+				Block ep1 = world.getBlock(X + 1, Y + 1, Z + 1);
+				Block fp1 = world.getBlock(X - 1, Y + 1, Z - 1);
+				Block gp1 = world.getBlock(X + 1, Y + 1, Z - 1);
+				Block hp1 = world.getBlock(X - 1, Y + 1, Z + 1);
+
+				Block blockn1 = world.getBlock(X, Y - 1, Z);
+				Block an1 = world.getBlock(X + 1, Y - 1, Z);
+				Block bn1 = world.getBlock(X - 1, Y - 1, Z);
+				Block cn1 = world.getBlock(X, Y - 1, Z + 1);
+				Block dn1 = world.getBlock(X, Y - 1, Z - 1);
+				Block en1 = world.getBlock(X + 1, Y - 1, Z + 1);
+				Block fn1 = world.getBlock(X - 1, Y - 1, Z - 1);
+				Block gn1 = world.getBlock(X + 1, Y - 1, Z - 1);
+				Block hn1 = world.getBlock(X - 1, Y - 1, Z + 1);
+				if (a == Blocks.log || a == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X + 1, Y, Z, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (b == Blocks.log || b == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X - 1, Y, Z, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (c == Blocks.log || c == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X, Y, Z + 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (d == Blocks.log || d == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X, Y, Z - 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (e == Blocks.log || e == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X + 1, Y, Z + 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (f == Blocks.log || f == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X - 1, Y, Z - 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (g == Blocks.log || g == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X + 1, Y, Z - 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (h == Blocks.log || h == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X - 1, Y, Z + 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+
+				// Y+
+				if (blockp1 == Blocks.log || blockp1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X, Y + 1, Z, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (ap1 == Blocks.log || ap1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X + 1, Y + 1, Z, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (bp1 == Blocks.log || bp1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X - 1, Y + 1, Z, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (cp1 == Blocks.log || cp1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X, Y + 1, Z + 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (dp1 == Blocks.log || dp1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X, Y + 1, Z - 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (ep1 == Blocks.log || ep1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X + 1, Y + 1, Z + 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (fp1 == Blocks.log || fp1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X - 1, Y + 1, Z - 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (gp1 == Blocks.log || gp1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X + 1, Y + 1, Z - 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (hp1 == Blocks.log || hp1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X - 1, Y + 1, Z + 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+
+				// Y-
+				if (blockn1 == Blocks.log || blockn1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X, Y - 1, Z, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (an1 == Blocks.log || an1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X + 1, Y - 1, Z, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (bn1 == Blocks.log || bn1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X - 1, Y - 1, Z, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (cn1 == Blocks.log || cn1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X, Y - 1, Z + 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (dn1 == Blocks.log || dn1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X, Y - 1, Z - 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (en1 == Blocks.log || en1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X + 1, Y - 1, Z + 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (fn1 == Blocks.log || fn1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X - 1, Y - 1, Z - 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (gn1 == Blocks.log || gn1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X + 1, Y - 1, Z - 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				if (hn1 == Blocks.log || hn1 == Blocks.log2) {
+					if (!world.isRemote) {
+						world.func_147480_a(X - 1, Y - 1, Z + 1, false);
+						world.spawnEntityInWorld(new EntityItem(world, X, Y, Z, stick));
+					}
+				}
+				itemstack.attemptDamageItem(par7, null);
 				return true;
 			}
 			// Gold
