@@ -34,7 +34,6 @@ public class CropBase extends BlockBush implements IGrowable {
 	}
 
 	@Override
-	@SideOnly(Side.CLIENT)
 	public IIcon getIcon(int Side, int GrowthStage) {
 		return iIcon[GrowthStage];
 	}

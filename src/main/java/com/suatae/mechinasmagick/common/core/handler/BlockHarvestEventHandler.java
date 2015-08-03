@@ -18,10 +18,6 @@ public class BlockHarvestEventHandler {
 	public void onBlockHarvest(HarvestDropsEvent event) {
 
 		World world = event.world;
-		int X = event.x;
-		int Y = event.y;
-		int Z = event.z;
-		Block leaf = world.getBlock(X, Y, Z);
 		Block block = event.block;
 
 		if (block == Blocks.gravel) {

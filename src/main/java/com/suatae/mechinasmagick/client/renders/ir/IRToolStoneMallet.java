@@ -103,7 +103,8 @@ public class IRToolStoneMallet implements IItemRenderer {
 					Minecraft.getMinecraft().renderEngine.bindTexture(MalletTexture);
 
 					GL11.glRotatef(180F, 1.0f, 0.0f, 0.0f);
-					GL11.glTranslatef(0F, -0.5F, 0F);
+					GL11.glRotatef(7F, 0.0f, 0.0f, 1.0f);
+					GL11.glTranslatef(0.058F, -0.5F, 0F);
 					GL11.glScalef(0.7f, 0.7f, 0.7f);
 					model.render((Entity) data[1], 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
 					GL11.glPopMatrix();

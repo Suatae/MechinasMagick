@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.10-1.18"
+version = "1.7.10-1.27"
 group= "com.suatae.mechinasmagick" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "MechinasMagick"
 

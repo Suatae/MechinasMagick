@@ -22,7 +22,6 @@ import net.minecraft.world.World;
 import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
-import com.suatae.mechinasmagick.common.init.ItemReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
 
 
@@ -103,15 +102,15 @@ public class BlockBranch extends BlockBase implements ITileEntityProvider {
 	public ArrayList<ItemStack> getDrops(World world, int x, int y, int z, int metadata, int fortune) {
 		ArrayList<ItemStack> drops = new ArrayList<ItemStack>();
 
-		drops.add(new ItemStack(this.LEAF(), world.rand.nextInt(3) + 1, 0));
+		// drops.add(new ItemStack(this.LEAF(), world.rand.nextInt(3) + 1, 0));
 		drops.add(new ItemStack(this.STICK(), world.rand.nextInt(10), 0));
 
 		return drops;
 	}
 
-	protected Item LEAF() {
-		return ItemReg.itemLeaf;
-	}
+	// protected Item LEAF() {
+	// return ItemReg.itemLeaf;
+	// }
 
 	protected Item STICK() {
 		return Items.stick;

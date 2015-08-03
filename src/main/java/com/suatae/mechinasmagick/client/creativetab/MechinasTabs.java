@@ -2,7 +2,6 @@ package com.suatae.mechinasmagick.client.creativetab;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBlock;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockReg;
@@ -25,8 +24,8 @@ public class MechinasTabs {
 																		+ "Core") {
 																	@Override
 																	public Item getTabIconItem() {
-																		return new ItemBlock(
-																				BlockReg.blockCoreAlum);
+																		return Item
+																				.getItemFromBlock(BlockReg.blockCoreTart);
 																	}
 																};
 }

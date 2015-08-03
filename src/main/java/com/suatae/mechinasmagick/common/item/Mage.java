@@ -1,26 +1,58 @@
 package com.suatae.mechinasmagick.common.item;
 
+import java.util.List;
+
+import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
+import net.minecraft.util.EnumChatFormatting;
 
+import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
-import com.suatae.mechinasmagick.common.init.ItemBase;
+
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 
 
 
 
-public class Mage extends ItemBase {
+public class Mage extends ItemFood {
 	public Mage() {
-		super();
+		super(0, true);
 		this.setUnlocalizedName(REF.NAME.ITEM.MAGE);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setAlwaysEdible();
 	}
 
 	@Override
-	public boolean onItemUse(ItemStack itemstack, EntityPlayer Player, World world, int X, int Y,
-			int Z, int par7, float par8, float par9, float par10) {
-		Player.inventory.consumeInventoryItem(this);
-		return true;
+	public void addInformation(ItemStack stack, EntityPlayer player, List list, boolean par4) {
+		list.add(EnumChatFormatting.BLUE + "Consume");
+		list.add(EnumChatFormatting.BLUE + "to become");
+		list.add(EnumChatFormatting.BLUE + "a Mage");
+	}
+
+	@Override
+	public String getUnlocalizedName() {
+		return String.format("item.%s%s", REF.MOD_ID.toLowerCase() + ":",
+				getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+	}
+
+	@Override
+	public String getUnlocalizedName(ItemStack itemStack) {
+		return String.format("item.%s%s", REF.MOD_ID.toLowerCase() + ":",
+				getUnwrappedUnlocalizedName(super.getUnlocalizedName()));
+	}
+
+	@Override
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IIconRegister iconRegister) {
+		itemIcon = iconRegister.registerIcon(this.getUnlocalizedName().substring(
+				this.getUnlocalizedName().indexOf(".") + 1));
+	}
+
+	protected String getUnwrappedUnlocalizedName(String unlocalizedName) {
+		return unlocalizedName.substring(unlocalizedName.indexOf(".") + 1);
 	}
 }

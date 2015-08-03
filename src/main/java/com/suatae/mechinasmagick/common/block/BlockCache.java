@@ -37,7 +37,9 @@ public class BlockCache extends Block implements ITileEntityProvider {
 		super(Material.rock);
 		this.setBlockName(REF.NAME.BLOCK.cache);
 		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
-		this.setHarvestLevel("pickaxe", 1);
+		this.setHarvestLevel("pickaxe", 0);
+		this.setHardness(1.5F);
+		this.setResistance(10.0F);
 		this.setLightOpacity(0);
 
 	}
@@ -222,7 +224,7 @@ public class BlockCache extends Block implements ITileEntityProvider {
 			if (world.rand.nextFloat() < 0.50F)
 				drops.add(new ItemStack(REF.CACHEDROP.LVL04.D02));
 			// LVL 05
-			if (world.rand.nextFloat() < 0.75F)
+			if (world.rand.nextFloat() < 0.15F)
 				drops.add(new ItemStack(REF.CACHEDROP.LVL05.D01));
 		}
 		return drops;

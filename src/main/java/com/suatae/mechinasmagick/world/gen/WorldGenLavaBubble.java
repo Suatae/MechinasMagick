@@ -26,6 +26,9 @@ public class WorldGenLavaBubble implements IWorldGenerator {
 		int x = chunkx * 16;
 		int z = chunkz * 16;
 		switch (world.provider.dimensionId) {
+			case -2:
+				generateCave(world, x, z, random);
+				break;
 			case -1:
 				generateNether(world, x, z, random);
 				break;
@@ -36,10 +39,12 @@ public class WorldGenLavaBubble implements IWorldGenerator {
 				generateEnd(world, x, z, random);
 				break;
 			default:
-				generateSurface(world, x, z, random);
+				generateNether(world, x, z, random);
 		}
 
 	}
+
+	private void generateCave(World world, int x, int z, Random random) {}
 
 	private void generateNether(World world, int x, int z, Random random) {}
 

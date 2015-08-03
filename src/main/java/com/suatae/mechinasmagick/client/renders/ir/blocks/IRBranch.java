@@ -1,6 +1,7 @@
 package com.suatae.mechinasmagick.client.renders.ir.blocks;
 
 import net.minecraft.client.renderer.OpenGlHelper;
+import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
@@ -35,6 +36,10 @@ public class IRBranch implements IItemRenderer {
 	@Override
 	public void renderItem(ItemRenderType type, ItemStack item, Object... data) {
 		if (type == IItemRenderer.ItemRenderType.ENTITY) {
+			if (RenderItem.renderInFrame == true) {
+				GL11.glRotatef(-90F, 0.0f, 0.0f, 1.0f);
+				GL11.glTranslatef(-0.1F, 0.0F, 0.15F);
+			}
 			GL11.glTranslatef(-0.75F, 0F, -0.75F);
 			GL11.glScalef(1.4F, 1.4F, 1.4F);
 			this.render.renderTileEntityAt(this.entity, 0.0D, 0.0D, 0.0D, 0.0F);

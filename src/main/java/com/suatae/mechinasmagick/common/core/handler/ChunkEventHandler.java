@@ -16,7 +16,7 @@ import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class ChunkEventHandler {
 
-	@SubscribeEvent(priority = EventPriority.HIGHEST, receiveCanceled = true)
+	@SubscribeEvent(priority = EventPriority.LOWEST, receiveCanceled = true)
 	public void onEvent(PopulateChunkEvent.Pre event) {
 		Chunk chunk = event.world.getChunkFromChunkCoords(event.chunkX, event.chunkZ);
 
