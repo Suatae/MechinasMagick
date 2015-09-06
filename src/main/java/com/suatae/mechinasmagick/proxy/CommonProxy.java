@@ -1,6 +1,12 @@
 package com.suatae.mechinasmagick.proxy;
 
-public class CommonProxy {
+import net.minecraft.entity.player.EntityPlayer;
+
+
+
+
+
+public abstract class CommonProxy {
 
 	public void registerItemRender() {}
 
@@ -9,5 +15,7 @@ public class CommonProxy {
 	public void registerTESRGoldCasing() {}
 
 	public void registerTESRIronCasing() {}
+
+	public abstract EntityPlayer getClientPlayer();
 
 }

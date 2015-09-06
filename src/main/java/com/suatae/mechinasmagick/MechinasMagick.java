@@ -1,10 +1,12 @@
 package com.suatae.mechinasmagick;
 
+import com.suatae.mechinasmagick.common.core.handler.BasicCraftingHandler;
 import com.suatae.mechinasmagick.common.core.handler.EventHandler;
 import com.suatae.mechinasmagick.common.core.handler.GenHandler;
 import com.suatae.mechinasmagick.common.core.lib.REF;
-import com.suatae.mechinasmagick.common.init.BlockReg;
-import com.suatae.mechinasmagick.common.init.ItemReg;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
+import com.suatae.mechinasmagick.common.init.registry.ItemReg;
+import com.suatae.mechinasmagick.network.DescriptionHandler;
 import com.suatae.mechinasmagick.proxy.CommonProxy;
 import com.suatae.mechinasmagick.utility.ConfigUtil;
 import com.suatae.mechinasmagick.utility.LogHelper;
@@ -27,12 +29,15 @@ public class MechinasMagick {
 	@Mod.Instance(REF.MOD_ID)
 	public static MechinasMagick	instance;
 
-	@SidedProxy(clientSide = REF.CLIENTSIDE, serverSide = REF.COMMONSIDE)
+	@SidedProxy(clientSide = REF.CLIENTSIDE, serverSide = REF.SERVERSIDE)
 	public static CommonProxy		proxy;
 	public static EventHandler		event;
 
 	@Mod.EventHandler
 	public static void PreLoad(FMLPreInitializationEvent event) {
+
+		FMLCommonHandler.instance().bus().register(new ConfigUtil());
+		ConfigUtil.init(event.getSuggestedConfigurationFile());
 
 		GenHandler.preInit();
 		EventHandler.preInit(event);
@@ -43,8 +48,8 @@ public class MechinasMagick {
 		proxy.registerTESRGoldCasing();
 		proxy.registerTESRIronCasing();
 		proxy.registerItemRender();
-		ConfigUtil.init(event.getSuggestedConfigurationFile());
-		FMLCommonHandler.instance().bus().register(new ConfigUtil());
+
+		DescriptionHandler.init();
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("[Pre-Initialization]: --- Loaded ---");
@@ -58,7 +63,14 @@ public class MechinasMagick {
 
 		GenHandler.Init();
 		EventHandler.Init(event);
-		RecipeRemover.voidRecipe();
+		if (ConfigUtil.BranchModule) {
+			RecipeRemover.voidRecipe();
+		}
+		else {
+
+		}
+		BasicCraftingHandler.shapedRecipes();
+		BasicCraftingHandler.shapelessRecipes();
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("The Monkey is ready with the Screwdriver");

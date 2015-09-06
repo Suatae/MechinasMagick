@@ -14,7 +14,7 @@ import net.minecraft.world.World;
 import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.AncientDoorBase;
-import com.suatae.mechinasmagick.common.init.BlockReg;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorB;
 
 
@@ -27,7 +27,7 @@ public class BlockAncientDoorB extends AncientDoorBase implements ITileEntityPro
 		super();
 		this.setBlockName(REF.NAME.BLOCK.ADOOR);
 		this.setBlockTextureName(REF.NAME.BLOCK.ADOOR);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TABblocks);
 
 	}
 
@@ -64,6 +64,6 @@ public class BlockAncientDoorB extends AncientDoorBase implements ITileEntityPro
 	@Override
 	public void onBlockPlacedBy(World world, int X, int Y, int Z, EntityLivingBase Player,
 			ItemStack itemstack) {
-		world.setBlock(X, Y + 1, Z, BlockReg.blockADoorT, 0, 2);
+		world.setBlock(X, Y + 1, Z, BlockReg.blockAncientDoorT, 0, 2);
 	}
 }

@@ -6,7 +6,7 @@ import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockMachineCore;
-import com.suatae.mechinasmagick.common.tileentity.TileEntityMeu;
+import com.suatae.mechinasmagick.common.tileentity.core.TileEntityMeu;
 
 
 

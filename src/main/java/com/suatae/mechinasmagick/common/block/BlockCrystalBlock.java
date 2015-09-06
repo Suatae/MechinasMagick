@@ -9,7 +9,7 @@ import net.minecraft.world.IBlockAccess;
 import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
-import com.suatae.mechinasmagick.common.init.BlockReg;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -28,7 +28,7 @@ public class BlockCrystalBlock extends BlockBase {
 		this.setHardness(1.5F);
 		this.setResistance(10.0F);
 		this.setLightOpacity(255);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TABblocks);
 	}
 
 	@Override

@@ -6,8 +6,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
-import com.suatae.mechinasmagick.common.init.BlockReg;
 import com.suatae.mechinasmagick.common.init.ItemBase;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
 
 
 

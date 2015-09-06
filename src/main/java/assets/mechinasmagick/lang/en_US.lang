@@ -49,7 +49,7 @@ tile.mechinasmagick:blockCoreWood.name=Wood Machine Core
 
 tile.mechinasmagick:blockCoreAlum.name=Aluminum Machine Core
 tile.mechinasmagick:blockCoreCopp.name=Copper Machine Core
-tile.mechinasmagick:blockCoreIg.name=Ignatious Machine Core
+tile.mechinasmagick:blockCoreIg.name=Ignatius Machine Core
 tile.mechinasmagick:blockCoreLap.name=Lapis Machine Core
 tile.mechinasmagick:blockCoreLem.name=Lemurite Machine Core
 tile.mechinasmagick:blockCoreZinc.name=Zinc Machine Core
@@ -127,8 +127,47 @@ tile.mechinasmagick:blockCoreAtl.name=Atlarus Machine Core
 
 tile.mechinasmagick:blockCoreTart.name=Tartarite Machine Core
 
+tile.mechinasmagick:blockRoadStone.name=Stone Road
+tile.mechinasmagick:blockRoadStoneSlab.name=Stone Road Slab
 
+tile.mechinasmagick:blockRoaddirt.name=Dirt Road
+tile.mechinasmagick:blockRoaddirtSlab.name=Dirt Road Slab
 
+tile.mechinasmagick:blockDirt_0.name=Compressed Dirt
+tile.mechinasmagick:blockDirt_1.name=Double Compressed Dirt
+tile.mechinasmagick:blockDirt_2.name=Triple Compressed Dirt
+tile.mechinasmagick:blockDirt_3.name=Quadruple Compressed Dirt
+tile.mechinasmagick:blockDirt_4.name=Quintuple Compressed Dirt
+tile.mechinasmagick:blockDirt_5.name=Sextuple Compressed Dirt
+tile.mechinasmagick:blockDirt_6.name=Septuple Compressed Dirt
+tile.mechinasmagick:blockDirt_7.name=Octuple Compressed Dirt
+
+tile.mechinasmagick:blockSand_0.name=Compressed Sand
+tile.mechinasmagick:blockSand_1.name=Double Compressed Sand
+tile.mechinasmagick:blockSand_2.name=Triple Compressed Sand
+tile.mechinasmagick:blockSand_3.name=Quadruple Compressed Sand
+tile.mechinasmagick:blockSand_4.name=Quintuple Compressed Sand
+tile.mechinasmagick:blockSand_5.name=Sextuple Compressed Sand
+tile.mechinasmagick:blockSand_6.name=Septuple Compressed Sand
+tile.mechinasmagick:blockSand_7.name=Octuple Compressed Sand
+
+tile.mechinasmagick:blockGravel_0.name=Compressed Gravel
+tile.mechinasmagick:blockGravel_1.name=Double Compressed Gravel
+tile.mechinasmagick:blockGravel_2.name=Triple Compressed Gravel
+tile.mechinasmagick:blockGravel_3.name=Quadruple Compressed Gravel
+tile.mechinasmagick:blockGravel_4.name=Quintuple Compressed Gravel
+tile.mechinasmagick:blockGravel_5.name=Sextuple Compressed Gravel
+tile.mechinasmagick:blockGravel_6.name=Septuple Compressed Gravel
+tile.mechinasmagick:blockGravel_7.name=Octuple Compressed Gravel
+
+tile.mechinasmagick:blockCobble_0.name=Compressed Cobblestone
+tile.mechinasmagick:blockCobble_1.name=Double Compressed Cobblestone
+tile.mechinasmagick:blockCobble_2.name=Triple Compressed Cobblestone
+tile.mechinasmagick:blockCobble_3.name=Quadruple Compressed Cobblestone
+tile.mechinasmagick:blockCobble_4.name=Quintuple Compressed Cobblestone
+tile.mechinasmagick:blockCobble_5.name=Sextuple Compressed Cobblestone
+tile.mechinasmagick:blockCobble_6.name=Septuple Compressed Cobblestone
+tile.mechinasmagick:blockCobble_7.name=Octuple Compressed Cobblestone
 
 itemGroup.MechinasMagick=Mechinas Magick Main
-itemGroup.MechinasMagickCore=Mechinas Magick Machine Cores
+itemGroup.MechinasMagickBlocks=Mechinas Magick Blocks

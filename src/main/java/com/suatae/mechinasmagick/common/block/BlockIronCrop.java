@@ -17,7 +17,7 @@ import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.CropBase;
-import com.suatae.mechinasmagick.common.init.ItemReg;
+import com.suatae.mechinasmagick.common.init.registry.ItemReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
 
 import cpw.mods.fml.relauncher.Side;
@@ -108,12 +108,12 @@ public class BlockIronCrop extends CropBase implements ITileEntityProvider {
 		if (metadata == maxGrowthStage) {
 
 			drops.add(new ItemStack(ItemReg.itemSeed, 1, 0));
-			drops.add(new ItemStack(ItemReg.itemAncientFruitIron, 2, 0));
+			drops.add(new ItemStack(ItemReg.IronAncientFruit, 2, 0));
 
 		}
 		if (metadata <= maxGrowthStage - 1) {
 
-			drops.add(new ItemStack(ItemReg.itemPrimedIron, 1, 0));
+			drops.add(new ItemStack(ItemReg.IronSeedPrimed, 1, 0));
 
 		}
 

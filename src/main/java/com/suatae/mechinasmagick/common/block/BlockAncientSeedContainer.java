@@ -9,9 +9,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 
+import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
-import com.suatae.mechinasmagick.common.init.ItemReg;
+import com.suatae.mechinasmagick.common.init.registry.ItemReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
 
 
@@ -28,6 +29,7 @@ public class BlockAncientSeedContainer extends BlockBase implements ITileEntityP
 		this.setHardness(1.5F);
 		this.setResistance(10.0F);
 		this.setLightOpacity(0);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TABblocks);
 		this.setHarvestLevel("pickaxe", 1);
 		this.setBlockBounds(0.095F, 0F, 0.095F, 0.905F, 0.805F, 0.905F);
 	}

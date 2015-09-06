@@ -16,7 +16,7 @@ public class BlockMachineCore extends BlockBase {
 		this.setStepSound(Block.soundTypeStone);
 		this.setHardness(1.5F);
 		this.setResistance(10.0F);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TABcore);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TABblocks);
 	}
 
 	@Override

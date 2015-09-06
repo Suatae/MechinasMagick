@@ -24,7 +24,7 @@ public class BlockCatalyst extends BlockBase implements ITileEntityProvider {
 		this.setStepSound(Block.soundTypeStone);
 		this.setHardness(1.5F);
 		this.setResistance(10.0F);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TABblocks);
 	}
 
 	@Override

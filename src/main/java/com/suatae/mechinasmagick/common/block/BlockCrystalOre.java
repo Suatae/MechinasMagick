@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.BlockBase;
-import com.suatae.mechinasmagick.common.init.BlockReg;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityOreE;
 
 
@@ -29,7 +29,7 @@ public class BlockCrystalOre extends BlockBase implements ITileEntityProvider {
 		this.setHardness(3.0F);
 		this.setResistance(15.0F);
 		this.setLightLevel(1.0F);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TABblocks);
 	}
 
 	@Override

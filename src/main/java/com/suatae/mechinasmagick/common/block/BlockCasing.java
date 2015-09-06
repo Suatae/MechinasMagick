@@ -19,7 +19,7 @@ import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
-import com.suatae.mechinasmagick.common.init.ItemReg;
+import com.suatae.mechinasmagick.common.init.registry.ItemReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCasing;
 
 import cpw.mods.fml.relauncher.Side;
@@ -113,8 +113,8 @@ public class BlockCasing extends Block implements ITileEntityProvider {
 	@Override
 	public void onBlockClicked(World world, int X, int Y, int Z, EntityPlayer Player) {
 		Item star = Items.nether_star;
-		Item seedGold = ItemReg.itemPrimedGold;
-		Item seedIron = ItemReg.itemPrimedIron;
+		Item seedGold = ItemReg.GoldSeedPrimed;
+		Item seedIron = ItemReg.IronSeedPrimed;
 
 		if (world.getBlockMetadata(X, Y, Z) == 2) {
 			if (Player.inventory.hasItem(star)) {

@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 import com.suatae.mechinasmagick.client.creativetab.MechinasTabs;
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.CropBase;
-import com.suatae.mechinasmagick.common.init.ItemReg;
+import com.suatae.mechinasmagick.common.init.registry.ItemReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityCrystalCrop;
 
 import cpw.mods.fml.relauncher.Side;
@@ -32,7 +32,7 @@ public class BlockCrystalCrop extends CropBase implements ITileEntityProvider {
 		super(Material.rock, 14);
 		this.setBlockName(REF.NAME.BLOCK.CRYSTAL);
 		this.setBlockTextureName(REF.NAME.BLOCK.CRYSTAL00);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TABblocks);
 		this.setStepSound(Block.soundTypeGlass);
 		this.setLightLevel(0.5F);
 		this.setHardness(1.5F);

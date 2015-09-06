@@ -16,7 +16,7 @@ import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
 import com.suatae.mechinasmagick.common.init.CropBase;
-import com.suatae.mechinasmagick.common.init.ItemReg;
+import com.suatae.mechinasmagick.common.init.registry.ItemReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 
 import cpw.mods.fml.relauncher.Side;
@@ -108,12 +108,12 @@ public class BlockGoldCrop extends CropBase implements ITileEntityProvider {
 		if (metadata == maxGrowthStage) {
 
 			drops.add(new ItemStack(ItemReg.itemSeed, 1, 0));
-			drops.add(new ItemStack(ItemReg.itemAncientFruitGold, 2, 0));
+			drops.add(new ItemStack(ItemReg.GoldAncientFruit, 2, 0));
 
 		}
 		if (metadata <= maxGrowthStage - 1) {
 
-			drops.add(new ItemStack(ItemReg.itemPrimedGold, 1, 0));
+			drops.add(new ItemStack(ItemReg.GoldSeedPrimed, 1, 0));
 
 		}
 

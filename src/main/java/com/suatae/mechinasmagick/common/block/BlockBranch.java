@@ -37,7 +37,7 @@ public class BlockBranch extends BlockBase implements ITileEntityProvider {
 		this.setStepSound(Block.soundTypeWood);
 		this.setHardness(1.0F);
 		this.setResistance(2.5F);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TABblocks);
 		this.setBlockBounds(0, 0, 0, 1.0F, 0.20F, 1.0F);
 	}
 

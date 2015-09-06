@@ -1,6 +1,8 @@
 package com.suatae.mechinasmagick.proxy;
 
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.tileentity.TileEntitySpecialRenderer;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.client.MinecraftForgeClient;
@@ -90,8 +92,8 @@ import com.suatae.mechinasmagick.client.renders.ir.blocks.IRCache;
 import com.suatae.mechinasmagick.client.renders.ir.blocks.IRCatalyst;
 import com.suatae.mechinasmagick.client.renders.ir.blocks.IRCore;
 import com.suatae.mechinasmagick.client.renders.ir.blocks.IROreE;
-import com.suatae.mechinasmagick.common.init.BlockReg;
-import com.suatae.mechinasmagick.common.init.ItemReg;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
+import com.suatae.mechinasmagick.common.init.registry.ItemReg;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientContainer;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityAncientDoorB;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityBranch;
@@ -102,8 +104,6 @@ import com.suatae.mechinasmagick.common.tileentity.TileEntityCrystalCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityFlint;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityGoldCrop;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityIronCrop;
-import com.suatae.mechinasmagick.common.tileentity.TileEntityMeu;
-import com.suatae.mechinasmagick.common.tileentity.TileEntityMith;
 import com.suatae.mechinasmagick.common.tileentity.TileEntityOreE;
 import com.suatae.mechinasmagick.common.tileentity.core.TileEntityASil;
 import com.suatae.mechinasmagick.common.tileentity.core.TileEntityAdam;
@@ -142,7 +142,9 @@ import com.suatae.mechinasmagick.common.tileentity.core.TileEntityLead;
 import com.suatae.mechinasmagick.common.tileentity.core.TileEntityLem;
 import com.suatae.mechinasmagick.common.tileentity.core.TileEntityLum;
 import com.suatae.mechinasmagick.common.tileentity.core.TileEntityMan;
+import com.suatae.mechinasmagick.common.tileentity.core.TileEntityMeu;
 import com.suatae.mechinasmagick.common.tileentity.core.TileEntityMid;
+import com.suatae.mechinasmagick.common.tileentity.core.TileEntityMith;
 import com.suatae.mechinasmagick.common.tileentity.core.TileEntityNaq;
 import com.suatae.mechinasmagick.common.tileentity.core.TileEntityNic;
 import com.suatae.mechinasmagick.common.tileentity.core.TileEntityOric;
@@ -377,8 +379,8 @@ public class ClientProxy extends CommonProxy {
 		MinecraftForgeClient.registerItemRenderer(ItemReg.ironsteelMallet,
 				new IRToolIronSteelMallet());
 		MinecraftForgeClient.registerItemRenderer(ItemReg.itemSeed, new IRSeed());
-		MinecraftForgeClient.registerItemRenderer(ItemReg.itemAncientFruitGold, new IRFruitGold());
-		MinecraftForgeClient.registerItemRenderer(ItemReg.itemAncientFruitIron, new IRFruitIron());
+		MinecraftForgeClient.registerItemRenderer(ItemReg.GoldAncientFruit, new IRFruitGold());
+		MinecraftForgeClient.registerItemRenderer(ItemReg.IronAncientFruit, new IRFruitIron());
 
 		// 00
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCoreWood),
@@ -529,8 +531,9 @@ public class ClientProxy extends CommonProxy {
 				new IRCache(c2, new TileEntityCache()));
 
 		// Doors
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockADoorB),
-				new IRAncientDoorB(adb, new TileEntityAncientDoorB()));
+		MinecraftForgeClient.registerItemRenderer(
+				Item.getItemFromBlock(BlockReg.blockAncientDoorB), new IRAncientDoorB(adb,
+						new TileEntityAncientDoorB()));
 
 		// Flints
 		// MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockFlint),
@@ -549,7 +552,8 @@ public class ClientProxy extends CommonProxy {
 		// new IRIronCrop(r3, new TileEntityIronCrop()));
 
 		// Other
-		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockASContainer),
+		MinecraftForgeClient.registerItemRenderer(
+				Item.getItemFromBlock(BlockReg.blockAncientSeedContainer),
 				new IRAncientSeedContainer(asc, new TileEntityAncientContainer()));
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCatalyst),
 				new IRCatalyst(c, new TileEntityCatalyst()));
@@ -558,5 +562,10 @@ public class ClientProxy extends CommonProxy {
 		MinecraftForgeClient.registerItemRenderer(Item.getItemFromBlock(BlockReg.blockCrystalOre),
 				new IROreE(o, new TileEntityOreE()));
 
+	}
+
+	@Override
+	public EntityPlayer getClientPlayer() {
+		return Minecraft.getMinecraft().thePlayer;
 	}
 }

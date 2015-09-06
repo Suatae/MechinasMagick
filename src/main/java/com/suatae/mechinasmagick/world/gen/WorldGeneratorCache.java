@@ -8,7 +8,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 
-import com.suatae.mechinasmagick.common.init.BlockReg;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
 
 import cpw.mods.fml.common.IWorldGenerator;
 

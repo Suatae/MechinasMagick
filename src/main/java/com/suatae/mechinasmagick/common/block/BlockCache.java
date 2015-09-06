@@ -36,7 +36,7 @@ public class BlockCache extends Block implements ITileEntityProvider {
 	public BlockCache() {
 		super(Material.rock);
 		this.setBlockName(REF.NAME.BLOCK.cache);
-		this.setCreativeTab(MechinasTabs.MechinasMagick_TAB);
+		this.setCreativeTab(MechinasTabs.MechinasMagick_TABblocks);
 		this.setHarvestLevel("pickaxe", 0);
 		this.setHardness(1.5F);
 		this.setResistance(10.0F);

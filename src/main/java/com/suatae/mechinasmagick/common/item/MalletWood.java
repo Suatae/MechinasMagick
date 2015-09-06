@@ -12,12 +12,9 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
-import com.suatae.mechinasmagick.common.init.BlockReg;
-import com.suatae.mechinasmagick.common.init.ItemReg;
 import com.suatae.mechinasmagick.common.init.ToolMalletBase;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
+import com.suatae.mechinasmagick.common.init.registry.ItemReg;
 
 
 
@@ -37,7 +34,6 @@ public class MalletWood extends ToolMalletBase {
 
 	}
 
-	@SideOnly(Side.CLIENT)
 	@Override
 	public boolean onItemUse(ItemStack itemstack, EntityPlayer Player, World world, int X, int Y,
 			int Z, int par7, float par8, float par9, float par10) {

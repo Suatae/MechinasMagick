@@ -12,9 +12,9 @@ import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.world.World;
 
 import com.suatae.mechinasmagick.common.core.lib.REF;
-import com.suatae.mechinasmagick.common.init.BlockReg;
-import com.suatae.mechinasmagick.common.init.ItemReg;
 import com.suatae.mechinasmagick.common.init.ToolMalletBase;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
+import com.suatae.mechinasmagick.common.init.registry.ItemReg;
 
 
 

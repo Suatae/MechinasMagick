@@ -5,7 +5,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
-import com.suatae.mechinasmagick.common.init.BlockReg;
+import com.suatae.mechinasmagick.common.init.registry.BlockReg;
 
 
 
@@ -14,13 +14,10 @@ import com.suatae.mechinasmagick.common.init.BlockReg;
 public class REF {
 	public static final String	MOD_ID				= "MechinasMagick";
 	public static final String	MOD_NAME			= "Mechinas Magick";
-	public static final String	VERSION				= "1.7.10-1.27";
+	public static final String	VERSION				= "1.7.10-1.28";
 	public static final String	CLIENTSIDE			= "com.suatae.mechinasmagick.proxy.ClientProxy";
-	public static final String	COMMONSIDE			= "com.suatae.mechinasmagick.proxy.CommonProxy";
+	public static final String	SERVERSIDE			= "com.suatae.mechinasmagick.proxy.ServerProxy";
 	public static final String	GUI_FACTORY_CLASS	= "com.suatae.mechinasmagick.client.gui.MMGuiFactory";
-
-	// Config Types
-	public static String		debug				= "DEV MODE";
 
 	public static class CACHEDROP {
 		public static class LVL01 {
@@ -85,11 +82,11 @@ public class REF {
 			public final static Block	Main		= Blocks.stonebrick;
 			public final static Block	Design		= BlockReg.blockStoneBrick;
 			public final static Block	Glyph		= BlockReg.blockStoneBrick;
-			public final static Block	Core		= BlockReg.blockASContainer;
+			public final static Block	Core		= BlockReg.blockAncientSeedContainer;
 			public final static Block	Catalyst	= BlockReg.blockCatalyst;
-			public final static Block	Step		= BlockReg.blockAStepping;
-			public final static Block	DoorT		= BlockReg.blockADoorT;
-			public final static Block	DoorB		= BlockReg.blockADoorB;
+			public final static Block	Step		= BlockReg.blockAncientSteppingStone;
+			public final static Block	DoorT		= BlockReg.blockAncientDoorT;
+			public final static Block	DoorB		= BlockReg.blockAncientDoorB;
 		}
 
 		public static class SEED {
@@ -271,6 +268,47 @@ public class REF {
 			public final static String	cAtl			= "blockCoreAtl";
 			// Core 20
 			public final static String	cTart			= "blockCoreTart";
+
+			public final static String	ROADStone		= "blockRoadStone";
+			public final static String	ROADStoneslab	= "blockRoadStoneSlab";
+			public final static String	ROADdirt		= "blockRoaddirt";
+			public final static String	ROADdirtslab	= "blockRoaddirtSlab";
+
+			public final static String	dirt1			= "blockDirt1";
+			public final static String	dirt2			= "blockDirt2";
+			public final static String	dirt3			= "blockDirt3";
+			public final static String	dirt4			= "blockDirt4";
+			public final static String	dirt5			= "blockDirt5";
+			public final static String	dirt6			= "blockDirt6";
+			public final static String	dirt7			= "blockDirt7";
+			public final static String	dirt8			= "blockDirt8";
+
+			public final static String	sand1			= "blockSand1";
+			public final static String	sand2			= "blockSand2";
+			public final static String	sand3			= "blockSand3";
+			public final static String	sand4			= "blockSand4";
+			public final static String	sand5			= "blockSand5";
+			public final static String	sand6			= "blockSand6";
+			public final static String	sand7			= "blockSand7";
+			public final static String	sand8			= "blockSand8";
+
+			public final static String	gravel1			= "blockGravel1";
+			public final static String	gravel2			= "blockGravel2";
+			public final static String	gravel3			= "blockGravel3";
+			public final static String	gravel4			= "blockGravel4";
+			public final static String	gravel5			= "blockGravel5";
+			public final static String	gravel6			= "blockGravel6";
+			public final static String	gravel7			= "blockGravel7";
+			public final static String	gravel8			= "blockGravel8";
+
+			public final static String	cobble			= "blockCobble";
+			public final static String	icobble			= "MechinasMagick:blockCobble";
+			public final static String	dirt			= "blockDirt";
+			public final static String	idirt			= "MechinasMagick:blockDirt";
+			public final static String	sand			= "blockSand";
+			public final static String	isand			= "MechinasMagick:blockSand";
+			public final static String	gravel			= "blockGravel";
+			public final static String	igravel			= "MechinasMagick:blockGravel";
 		}
 
 	}
