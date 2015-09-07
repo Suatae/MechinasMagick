@@ -44,6 +44,7 @@ tile.mechinasmagick:blockCache_3.name=Elite Cache
 tile.mechinasmagick:blockCrystalOre.name=Dark Crystal Ore
 tile.mechinasmagick:blockCrystalBlock.name=Dark Crystal Block
 tile.mechinasmagick:blockVoid.name=Void
+tile.mechinasmagick:blockHardenedDirt.name=Hardened Dirt
 
 tile.mechinasmagick:blockCoreWood.name=Wood Machine Core
 

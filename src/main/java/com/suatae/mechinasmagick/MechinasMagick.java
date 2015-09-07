@@ -71,6 +71,7 @@ public class MechinasMagick {
 		}
 		BasicCraftingHandler.shapedRecipes();
 		BasicCraftingHandler.shapelessRecipes();
+		BasicCraftingHandler.smeltingRecipes();
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("The Monkey is ready with the Screwdriver");

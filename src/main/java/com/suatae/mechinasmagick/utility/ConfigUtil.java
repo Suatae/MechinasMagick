@@ -74,6 +74,11 @@ public class ConfigUtil {
 	public static final boolean	Cache			= true;
 	public static final String	Cache_comment	= "Set to true to enable Cache Blocks.";
 
+	// Cache
+	public static boolean		DirtModule;
+	public static final boolean	Dirt			= true;
+	public static final String	Dirt_comment	= "Set to true to enable Hardened Dirt.";
+
 	public static void init(File configFile) // Create the configuration object
 												// from the given configuration
 												// file
@@ -129,6 +134,7 @@ public class ConfigUtil {
 		RoadModule = configuration.getBoolean("Road Block", modules, Road, Road_comment);
 		CacheModule = configuration.getBoolean("Cache Blocks", modules, Cache, Cache_comment);
 		LeafModule = configuration.getBoolean("Test", modules, Leaf, Leaf_comment);
+		DirtModule = configuration.getBoolean("Dirt", modules, Dirt, Dirt_comment);
 
 		if (ConfigUtil.DebugMode) {
 			LogHelper.info("Debug Mode: " + DebugMode);

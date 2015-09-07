@@ -15,6 +15,7 @@ import com.suatae.mechinasmagick.common.block.BlockCrystalCrop;
 import com.suatae.mechinasmagick.common.block.BlockCrystalOre;
 import com.suatae.mechinasmagick.common.block.BlockFlint;
 import com.suatae.mechinasmagick.common.block.BlockGoldCrop;
+import com.suatae.mechinasmagick.common.block.BlockHardenedDirt;
 import com.suatae.mechinasmagick.common.block.BlockIronCrop;
 import com.suatae.mechinasmagick.common.block.BlockLavaStone;
 import com.suatae.mechinasmagick.common.block.BlockRoadDirt;
@@ -215,6 +216,7 @@ public class BlockReg {
 	public static final Block	blockCache					= new BlockCache();
 	public static final Block	blockCrystalOre				= new BlockCrystalOre();
 	public static final Block	blockVoid					= new BlockVoid();
+	public static final Block	blockHardenedDirt			= new BlockHardenedDirt();
 
 	// Core 00
 	public static final Block	blockCoreWood				= new BlockCoreWood();
@@ -446,6 +448,13 @@ public class BlockReg {
 
 			GameRegistry.registerBlock(blockRoaddirt, "blockRoaddirt");
 			GameRegistry.registerBlock(blockRoaddirtSlab, "blockRoaddirtSlab");
+		}
+		else {
+
+		}
+
+		if (ConfigUtil.DirtModule) {
+			GameRegistry.registerBlock(blockHardenedDirt, "blockHardenedDirt");
 		}
 		else {
 
