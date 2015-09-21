@@ -59,15 +59,15 @@ public class WorldGeneratorCache implements IWorldGenerator {
 			int randz = z + random.nextInt(16);
 			if (world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.river
 					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.deepOcean
-					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean) {
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesa
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau_F) {
 				Block block = world.getBlock(randx, randy + y, randz);
 				if (!(block != GRASS)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache01GenGrass(world, randx, randy, randz);
 							}
 						}
@@ -75,12 +75,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block1 = world.getBlock(randx, randy + y, randz);
 				if (!(block1 != STONE)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache01GenStone(world, randx, randy, randz);
 							}
 						}
@@ -88,12 +85,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block2 = world.getBlock(randx, randy + y, randz);
 				if (!(block2 != SAND)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache01GenSand(world, randx, randy, randz);
 							}
 						}
@@ -101,12 +95,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block3 = world.getBlock(randx, randy + y, randz);
 				if (!(block3 != GRAVEL)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache01GenGravel(world, randx, randy, randz);
 							}
 						}
@@ -121,15 +112,15 @@ public class WorldGeneratorCache implements IWorldGenerator {
 			int randz = z + random.nextInt(16);
 			if (world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.river
 					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.deepOcean
-					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean) {
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesa
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau_F) {
 				Block block = world.getBlock(randx, randy + y, randz);
 				if (!(block != GRASS)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache02GenGrass(world, randx, randy, randz);
 							}
 						}
@@ -137,12 +128,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block1 = world.getBlock(randx, randy + y, randz);
 				if (!(block1 != STONE)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache02GenStone(world, randx, randy, randz);
 							}
 						}
@@ -150,12 +138,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block2 = world.getBlock(randx, randy + y, randz);
 				if (!(block2 != SAND)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache02GenSand(world, randx, randy, randz);
 							}
 						}
@@ -163,12 +148,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block3 = world.getBlock(randx, randy + y, randz);
 				if (!(block3 != GRAVEL)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache02GenGravel(world, randx, randy, randz);
 							}
 						}
@@ -183,15 +165,15 @@ public class WorldGeneratorCache implements IWorldGenerator {
 			int randz = z + random.nextInt(16);
 			if (world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.river
 					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.deepOcean
-					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean) {
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesa
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau_F) {
 				Block block = world.getBlock(randx, randy + y, randz);
 				if (!(block != GRASS)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache03GenGrass(world, randx, randy, randz);
 							}
 						}
@@ -199,12 +181,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block1 = world.getBlock(randx, randy + y, randz);
 				if (!(block1 != STONE)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache03GenStone(world, randx, randy, randz);
 							}
 						}
@@ -212,12 +191,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block2 = world.getBlock(randx, randy + y, randz);
 				if (!(block2 != SAND)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache03GenSand(world, randx, randy, randz);
 							}
 						}
@@ -225,12 +201,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block3 = world.getBlock(randx, randy + y, randz);
 				if (!(block3 != GRAVEL)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache03GenGravel(world, randx, randy, randz);
 							}
 						}
@@ -245,15 +218,15 @@ public class WorldGeneratorCache implements IWorldGenerator {
 			int randz = z + random.nextInt(16);
 			if (world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.river
 					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.deepOcean
-					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean) {
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesa
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau_F) {
 				Block block = world.getBlock(randx, randy + y, randz);
 				if (!(block != GRASS)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache04GenGrass(world, randx, randy, randz);
 							}
 						}
@@ -261,12 +234,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block1 = world.getBlock(randx, randy + y, randz);
 				if (!(block1 != STONE)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache04GenStone(world, randx, randy, randz);
 							}
 						}
@@ -274,12 +244,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block2 = world.getBlock(randx, randy + y, randz);
 				if (!(block2 != SAND)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache04GenSand(world, randx, randy, randz);
 							}
 						}
@@ -287,12 +254,9 @@ public class WorldGeneratorCache implements IWorldGenerator {
 				}
 				Block block3 = world.getBlock(randx, randy + y, randz);
 				if (!(block3 != GRAVEL)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != AIR)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != AIR)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != AIR)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								cache04GenGravel(world, randx, randy, randz);
 							}
 						}

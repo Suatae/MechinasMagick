@@ -14,7 +14,7 @@ import com.suatae.mechinasmagick.common.init.registry.BlockReg;
 public class REF {
 	public static final String	MOD_ID				= "MechinasMagick";
 	public static final String	MOD_NAME			= "Mechinas Magick";
-	public static final String	VERSION				= "1.7.10-1.29";
+	public static final String	VERSION				= "1.7.10-1.30";
 	public static final String	CLIENTSIDE			= "com.suatae.mechinasmagick.proxy.ClientProxy";
 	public static final String	SERVERSIDE			= "com.suatae.mechinasmagick.proxy.ServerProxy";
 	public static final String	GUI_FACTORY_CLASS	= "com.suatae.mechinasmagick.client.gui.MMGuiFactory";

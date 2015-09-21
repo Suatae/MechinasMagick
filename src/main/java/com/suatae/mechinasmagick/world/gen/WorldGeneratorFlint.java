@@ -66,15 +66,15 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 			int randz = z + random.nextInt(16);
 			if (world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.river
 					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.deepOcean
-					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean) {
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesa
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau_F) {
 				Block block = world.getBlock(randx, randy + y, randz);
 				if (!(block != grass)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint01GenGrass(world, randx, randy, randz);
 							}
 						}
@@ -82,12 +82,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block1 = world.getBlock(randx, randy + y, randz);
 				if (!(block1 != stone)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint01Genstone(world, randx, randy, randz);
 							}
 						}
@@ -95,12 +92,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block2 = world.getBlock(randx, randy + y, randz);
 				if (!(block2 != sand)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint01Gensand(world, randx, randy, randz);
 							}
 						}
@@ -108,12 +102,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block3 = world.getBlock(randx, randy + y, randz);
 				if (!(block3 != gravel)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint01Gengravel(world, randx, randy, randz);
 							}
 						}
@@ -128,15 +119,15 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 			int randz = z + random.nextInt(16);
 			if (world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.river
 					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.deepOcean
-					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean) {
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesa
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau_F) {
 				Block block = world.getBlock(randx, randy + y, randz);
 				if (!(block != grass)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint02GenGrass(world, randx, randy, randz);
 							}
 						}
@@ -144,12 +135,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block1 = world.getBlock(randx, randy + y, randz);
 				if (!(block1 != stone)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint02Genstone(world, randx, randy, randz);
 							}
 						}
@@ -157,12 +145,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block2 = world.getBlock(randx, randy + y, randz);
 				if (!(block2 != sand)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint02Gensand(world, randx, randy, randz);
 							}
 						}
@@ -170,12 +155,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block3 = world.getBlock(randx, randy + y, randz);
 				if (!(block3 != gravel)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint02Gengravel(world, randx, randy, randz);
 							}
 						}
@@ -190,15 +172,15 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 			int randz = z + random.nextInt(16);
 			if (world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.river
 					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.deepOcean
-					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean) {
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesa
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau_F) {
 				Block block = world.getBlock(randx, randy + y, randz);
 				if (!(block != grass)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint03GenGrass(world, randx, randy, randz);
 							}
 						}
@@ -206,12 +188,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block1 = world.getBlock(randx, randy + y, randz);
 				if (!(block1 != stone)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint03Genstone(world, randx, randy, randz);
 							}
 						}
@@ -219,12 +198,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block2 = world.getBlock(randx, randy + y, randz);
 				if (!(block2 != sand)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint03Gensand(world, randx, randy, randz);
 							}
 						}
@@ -232,12 +208,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block3 = world.getBlock(randx, randy + y, randz);
 				if (!(block3 != gravel)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint03Gengravel(world, randx, randy, randz);
 							}
 						}
@@ -252,15 +225,15 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 			int randz = z + random.nextInt(16);
 			if (world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.river
 					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.deepOcean
-					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean) {
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.ocean
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesa
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau
+					&& world.getBiomeGenForCoords(randx, randz) != BiomeGenBase.mesaPlateau_F) {
 				Block block = world.getBlock(randx, randy + y, randz);
 				if (!(block != grass)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint04GenGrass(world, randx, randy, randz);
 							}
 						}
@@ -269,11 +242,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				Block block1 = world.getBlock(randx, randy + y, randz);
 				if (!(block1 != stone)) {
 					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint04Genstone(world, randx, randy, randz);
 							}
 						}
@@ -282,11 +253,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				Block block2 = world.getBlock(randx, randy + y, randz);
 				if (!(block2 != sand)) {
 					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint04Gensand(world, randx, randy, randz);
 							}
 						}
@@ -294,12 +263,9 @@ public class WorldGeneratorFlint implements IWorldGenerator {
 				}
 				Block block3 = world.getBlock(randx, randy + y, randz);
 				if (!(block3 != gravel)) {
-					Block blocka = world.getBlock(randx, randy + yy, randz);
-					if (!(blocka != air)) {
-						Block blockz1 = world.getBlock(randx, randy, randz + zz);
-						if (!(blockz1 != air)) {
-							Block blockz2 = world.getBlock(randx, randy, randz - zz);
-							if (!(blockz2 != air)) {
+					if (world.isAirBlock(randx, randy + yy, randz)) {
+						if (world.isAirBlock(randx, randy, randz + zz)) {
+							if (world.isAirBlock(randx, randy, randz - zz)) {
 								flint04Gengravel(world, randx, randy, randz);
 							}
 						}
